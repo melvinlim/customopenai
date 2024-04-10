@@ -1,19 +1,45 @@
 import json
 
-try:
-	import requests
-	REQUESTS=True
-	STREAM=True
-except:
-	from urllib.request import Request, urlopen
-	REQUESTS=False
-	STREAM=False
+from urllib.request import Request, urlopen
+
+STREAM=False
+STREAM=True
 
 startTok='<|im_start|>'
 endTok='<|im_end|>'
 
 responseLength=50
 responseLength=100
+
+def decodeStream(req):
+	response=''
+	result=''
+	READSZ=15
+
+	#import pdb
+	#pdb.set_trace()
+
+	while(True):
+		datatag = -1
+		while(datatag<0):
+			nextresponse=req.read(READSZ).decode('utf-8')
+			if(nextresponse==''):
+				return result
+			response+=nextresponse
+			datatag=response.find('data: ')
+		response=response[datatag+6:]
+		datatag = -1
+		while(datatag<0):
+			nextresponse=req.read(READSZ).decode('utf-8')
+			if(nextresponse==''):
+				return result
+			response+=nextresponse
+			datatag=response.find('data: ')
+		data=response[:datatag]
+		x=json.loads(data)
+		content=x['content']
+		print(content,end='',flush=True)
+		result+=content
 
 class LlamaModel():
 	def __init__(self,url,name,sysmsg):
@@ -34,23 +60,19 @@ class LlamaModel():
 		#self.jsondata['prompt']=messages
 		self.jsondata['prompt']=self.sysmsg+messages+self.trailer
 		strdata=json.dumps(self.jsondata)
-		if(REQUESTS):
-			response=requests.post(self.url, data=strdata, headers=self.headers, stream=True)
+		if(STREAM):
+			request=Request(method='POST', data=strdata.encode('utf-8'), headers=self.headers, url=self.url)
+			req=urlopen(request)
+
+			print(self.name+': ')
+			result=decodeStream(req)
 		else:
 			request=Request(method='POST', data=strdata.encode('utf-8'), headers=self.headers, url=self.url)
 			response=urlopen(request).read().decode('utf-8')
 
-		result=''
+			result=''
 
-		print(self.name+': ')
-		if(STREAM):
-			for line in response.iter_lines():
-				if line:
-					x=json.loads(line[6:])
-					content=x['content']
-					print(content,end='',flush=True)
-					result+=content
-		else:
+			print(self.name+': ')
 			x=json.loads(response)
 			content=x['content']
 			print(content,end='',flush=True)
