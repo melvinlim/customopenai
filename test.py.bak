@@ -1,0 +1,58 @@
+
+#model_path='../winuser/scriptllama/models/airoboros-l2-13b-3.1.1.Q5_K_M.gguf'
+
+#import llama_cpp
+
+#model = llama_cpp.Llama(
+#	model_path=model_path,
+#	verbose=True
+#)
+#print(model("The quick brown fox jumps ", stop=["."])["choices"][0]["text"])
+
+
+import pycurl
+from urllib.parse import urlencode
+
+from io import BytesIO
+
+import json
+import requests
+
+jsondata={
+	'prompt':'once upon a time ',
+}
+
+headers={"Content-type": "application/json"}
+
+strdata=json.dumps(jsondata)
+
+buf=BytesIO()
+
+crl=pycurl.Curl()
+url='http://192.168.68.107:8080/v1'
+url='http://192.168.68.107:8080/v1/chat/completions'
+#url='pycurl.io'
+crl.setopt(crl.URL, url)
+
+crl.setopt(pycurl.HTTPHEADER, [
+    'Accept: application/json',
+    'Content-Type: application/json'
+])
+#crl.setopt(crl.HTTPHEADER, ['Accept: application/json', 'Content-Type: application/json'])
+
+crl.setopt(pycurl.POST, 1)
+
+crl.setopt(pycurl.POSTFIELDS, strdata)
+
+#post_body = {'prompt': 'once upon a time '}
+#post_body = "{'prompt':'once upon a time '}"
+#post_data = urlencode(post_body)
+#crl.setopt(crl.POSTFIELDS, post_data)
+
+crl.setopt(crl.WRITEDATA, buf)
+crl.perform()
+crl.close()
+
+val=buf.getvalue()
+asc=val.decode('ascii')
+print(asc)

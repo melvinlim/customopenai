@@ -1,0 +1,59 @@
+import json
+import requests
+
+url='http://192.168.68.107:8080/v1'
+url='http://192.168.68.107:8080/completion'
+
+startTok='<|im_start|>'
+endTok='<|im_end|>'
+
+class LlamaModel():
+	def __init__(self,url,name,sysmsg):
+		self.headers={"Content-type": "application/json"}
+		self.url=url+'/completion'
+		self.name=name
+		self.sysmsg=sysmsg
+		self.sysmsg=startTok+'system\n'+sysmsg+endTok+'\n'
+		self.trailer=startTok+self.name+'\n'
+		self.jsondata={
+			'prompt':'',
+			'n_predict':50,
+			'stream':True,
+			'stop':[startTok,endTok],
+		}
+	def chatresp(self,messages):
+		#self.jsondata['prompt']=messages
+		self.jsondata['prompt']=self.sysmsg+messages+self.trailer
+		strdata=json.dumps(self.jsondata)
+		response=requests.post(self.url, data=strdata, headers=self.headers, stream=True)
+
+		result=''
+
+		print(self.name+': ')
+		for line in response.iter_lines():
+			if line:
+				x=json.loads(line[6:])
+				content=x['content']
+				print(content,end='',flush=True)
+				result+=content
+		print()
+		return result
+
+messages=startTok+'bob\nhi alice.'+endTok+'\n'
+dolphin_url='http://192.168.68.107:8080'
+capybara_url='http://192.168.68.107:8090'
+#dolphin=LlamaModel(dolphin_url,'alice','you are alice.  you\'re playing dungeons and dragons with your friend bob.  you are a wizard.')
+#capybara=LlamaModel(capybara_url,'bob','you are bob.  you\'re playing dungeons and dragons with your friend alice.  you are the dungeon master.')
+dolphin=LlamaModel(dolphin_url,'alice','you are alice.  you\'re role playing being a wizard at hogwarts with your friend bob.')
+capybara=LlamaModel(capybara_url,'bob','you are bob.  you\'re role playing being a wizard at hogwarts with your friend alice.')
+
+chatrounds=5
+for i in range(chatrounds):
+	result=dolphin.chatresp(messages)
+	messages+=startTok+dolphin.name+'\n'+result+'\n'
+
+	result=capybara.chatresp(messages)
+	messages+=startTok+capybara.name+'\n'+result+'\n'
+
+#print()
+#print(result)

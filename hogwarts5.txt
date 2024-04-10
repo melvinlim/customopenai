@@ -1,0 +1,18 @@
+alice:
+hello eve. how can i assist you today?
+--------
+eve:
+i'm trying to brew a potion but i keep getting it wrong. can you help me?
+--------
+alice:
+of course, eve. what type of potion are you trying to brew?
+
+--------
+eve:
+a love potion. i want to give it to bob as a present.
+--------
+bob:
+that sounds like a great idea, eve! alice, can you help eve with the brewing process?
+
+
+--------
