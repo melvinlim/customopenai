@@ -1,5 +1,13 @@
 import json
-import requests
+
+try:
+	import requests
+	REQUESTS=True
+	STREAM=True
+except:
+	from urllib.request import Request, urlopen
+	REQUESTS=False
+	STREAM=False
 
 startTok='<|im_start|>'
 endTok='<|im_end|>'
@@ -19,24 +27,32 @@ class LlamaModel():
 			'beam_width':5,
 			'prompt':'',
 			'n_predict':responseLength,
-			'stream':True,
+			'stream':STREAM,
 			'stop':[startTok,endTok],
 		}
 	def chatresp(self,messages):
 		#self.jsondata['prompt']=messages
 		self.jsondata['prompt']=self.sysmsg+messages+self.trailer
 		strdata=json.dumps(self.jsondata)
-		response=requests.post(self.url, data=strdata, headers=self.headers, stream=True)
+		#response=requests.post(self.url, data=strdata, headers=self.headers, stream=True)
+		request=Request(method='POST', data=strdata.encode('utf-8'), headers=self.headers, url=self.url)
+		response=urlopen(request).read().decode('utf-8')
 
 		result=''
 
 		print(self.name+': ')
-		for line in response.iter_lines():
-			if line:
-				x=json.loads(line[6:])
-				content=x['content']
-				print(content,end='',flush=True)
-				result+=content
+		if(STREAM):
+			for line in response.iter_lines():
+				if line:
+					x=json.loads(line[6:])
+					content=x['content']
+					print(content,end='',flush=True)
+					result+=content
+		else:
+			x=json.loads(response)
+			content=x['content']
+			print(content,end='',flush=True)
+			result+=content
 		print('\n--------')
 		return result
 
