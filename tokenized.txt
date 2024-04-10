@@ -1,3 +1,0 @@
-{"tid":"9940","timestamp":1712514057,"level":"VERB","function":"update_slots","line":1825,"msg":"prompt tokenized","id_slot":0,"id_task":0,"n_ctx":4096,"n_keep":0,"n_prompt_tokens":92,"prompt_tokens":" <|im_start|>system\nyou are alice.<|im_end|>\n<|im_start|>alice\nhi<|im_end|>\n<|im_start|>eve\nhi alice.<|im_end|>\n<|im_start|>bob\nhello everyone.<|im_end|>\n<|im_start|>assistant\n"}
-
-<|im_start|>system\nyou are alice.<|im_end|>\n<|im_start|>alice\nhi<|im_end|>\n<|im_start|>eve\nhi alice.<|im_end|>\n<|im_start|>bob\nhello everyone.<|im_end|>\n<|im_start|>assistant\n
