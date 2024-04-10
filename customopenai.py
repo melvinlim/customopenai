@@ -34,9 +34,11 @@ class LlamaModel():
 		#self.jsondata['prompt']=messages
 		self.jsondata['prompt']=self.sysmsg+messages+self.trailer
 		strdata=json.dumps(self.jsondata)
-		#response=requests.post(self.url, data=strdata, headers=self.headers, stream=True)
-		request=Request(method='POST', data=strdata.encode('utf-8'), headers=self.headers, url=self.url)
-		response=urlopen(request).read().decode('utf-8')
+		if(REQUESTS):
+			response=requests.post(self.url, data=strdata, headers=self.headers, stream=True)
+		else:
+			request=Request(method='POST', data=strdata.encode('utf-8'), headers=self.headers, url=self.url)
+			response=urlopen(request).read().decode('utf-8')
 
 		result=''
 
@@ -103,7 +105,7 @@ def chatOnce(llmmodel,messages):
 models=[dolphin,capybara,airoboros]
 modelindex=0
 
-chatrounds=4
+chatrounds=2
 for i in range(chatrounds):
 	messages,nextToSpeak=chatOnce(models[modelindex],messages)
 	if(nextToSpeak==None):
