@@ -34,7 +34,7 @@ def decodeStream(req):
 		print(content,end='',flush=True)
 		result+=content
 
-class LlamaModel():
+class LlmModel():
 	def __init__(self,url,name,sysmsg,stream=None,maxRespLen=None):
 		self.stream=False
 		self.headers={"Content-type": "application/json"}

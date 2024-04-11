@@ -1,4 +1,4 @@
-from customopenai import LlamaModel
+from customopenai import LlmModel
 
 STREAM=False
 STREAM=True
@@ -18,9 +18,9 @@ aliceText="you are alice.  a college student.  you're chatting with your friends
 bobText="you are bob.  a college student.  you're chatting with your friends alice and eve at a coffee shop during spring break."
 eveText="you are eve.  a college student.  you're chatting with your friends alice and bob at a coffee shop during spring break."
 
-dolphin=LlamaModel(dolphin_url,'alice',aliceText,stream=STREAM,maxRespLen=maxRespLen)
-capybara=LlamaModel(capybara_url,'bob',bobText,stream=STREAM,maxRespLen=maxRespLen)
-airoboros=LlamaModel(airoboros_url,'eve',eveText,stream=STREAM,maxRespLen=maxRespLen)
+dolphin=LlmModel(dolphin_url,'alice',aliceText,stream=STREAM,maxRespLen=maxRespLen)
+capybara=LlmModel(capybara_url,'bob',bobText,stream=STREAM,maxRespLen=maxRespLen)
+airoboros=LlmModel(airoboros_url,'eve',eveText,stream=STREAM,maxRespLen=maxRespLen)
 
 models=[dolphin,capybara,airoboros]
 modelindex=0

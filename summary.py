@@ -1,4 +1,4 @@
-from customopenai import LlamaModel
+from customopenai import LlmModel
 
 STREAM=True
 
@@ -13,5 +13,5 @@ document=""""""
 #messages='<|im_start|>'+document+'<|im_end|>'+'\n'
 messages=document+'\n'
 
-assistant=LlamaModel(assistant_url,'assistant',assistantText,stream=STREAM,maxRespLen=maxRespLen)
+assistant=LlmModel(assistant_url,'assistant',assistantText,stream=STREAM,maxRespLen=maxRespLen)
 assistant.chatresp(messages)
