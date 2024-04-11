@@ -3,6 +3,8 @@ from customopenai import LlamaModel, chatOnce
 STREAM=False
 STREAM=True
 
+maxRespLen=200
+
 startTok='<|im_start|>'
 endTok='<|im_end|>'
 
@@ -15,13 +17,13 @@ airoboros_url='http://192.168.68.107:8070'
 #capybara=LlamaModel(capybara_url,'bob','you are bob.  you\'re role playing being a wizard at hogwarts with your friends alice and eve.  respond with ... to allow someone else to speak.')
 #airoboros=LlamaModel(airoboros_url,'eve','you are eve.  you\'re role playing being a wizard at hogwarts with your friends alice and bob.  respond with ... to allow someone else to speak.')
 
-aliceText="you are alice.  a college student.  you're chatting with your friends bob and eve at a coffee shop."
-bobText="you are bob.  a college student.  you're chatting with your friends alice and eve at a coffee shop."
-eveText="you are eve.  a college student.  you're chatting with your friends alice and bob at a coffee shop."
+aliceText="you are alice.  a college student.  you're chatting with your friends bob and eve at a coffee shop during spring break."
+bobText="you are bob.  a college student.  you're chatting with your friends alice and eve at a coffee shop during spring break."
+eveText="you are eve.  a college student.  you're chatting with your friends alice and bob at a coffee shop during spring break."
 
-dolphin=LlamaModel(dolphin_url,'alice',aliceText)
-capybara=LlamaModel(capybara_url,'bob',bobText)
-airoboros=LlamaModel(airoboros_url,'eve',eveText)
+dolphin=LlamaModel(dolphin_url,'alice',aliceText,stream=STREAM,maxRespLen=maxRespLen)
+capybara=LlamaModel(capybara_url,'bob',bobText,stream=STREAM,maxRespLen=maxRespLen)
+airoboros=LlamaModel(airoboros_url,'eve',eveText,stream=STREAM,maxRespLen=maxRespLen)
 
 models=[dolphin,capybara,airoboros]
 modelindex=0

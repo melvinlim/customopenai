@@ -1,14 +1,8 @@
 import json
 from urllib.request import Request, urlopen
 
-STREAM=False
-STREAM=True
-
 startTok='<|im_start|>'
 endTok='<|im_end|>'
-
-responseLength=50
-responseLength=100
 
 def decodeStream(req):
 	response=''
@@ -41,7 +35,7 @@ def decodeStream(req):
 		result+=content
 
 class LlamaModel():
-	def __init__(self,url,name,sysmsg):
+	def __init__(self,url,name,sysmsg,stream=None,maxRespLen=None):
 		self.headers={"Content-type": "application/json"}
 		self.url=url+'/completion'
 		self.name=name
@@ -51,15 +45,19 @@ class LlamaModel():
 		self.jsondata={
 			'beam_width':5,
 			'prompt':'',
-			'n_predict':responseLength,
-			'stream':STREAM,
+			'n_predict':maxRespLen,
 			'stop':[startTok,endTok],
 		}
+		if(stream):
+			self.stream=True
+			self.jsondata['stream']=stream
+		if(maxRespLen):
+			self.jsondata['n_predict']=maxRespLen
 	def chatresp(self,messages):
 		#self.jsondata['prompt']=messages
 		self.jsondata['prompt']=self.sysmsg+messages+self.trailer
 		strdata=json.dumps(self.jsondata)
-		if(STREAM):
+		if(self.stream):
 			request=Request(method='POST', data=strdata.encode('utf-8'), headers=self.headers, url=self.url)
 			req=urlopen(request)
 
