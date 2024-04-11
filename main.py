@@ -1,4 +1,4 @@
-from customopenai import LlamaModel, chatOnce
+from customopenai import LlamaModel
 
 STREAM=False
 STREAM=True
@@ -30,7 +30,8 @@ modelindex=0
 
 chatrounds=6
 for i in range(chatrounds):
-	messages,nextToSpeak=chatOnce(models[modelindex],messages)
+	model=models[modelindex]
+	messages,nextToSpeak=model.chatOnce(messages)
 	if(nextToSpeak==None):
 		modelindex=(modelindex+1)%3
 	else:

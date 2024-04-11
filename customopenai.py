@@ -36,6 +36,7 @@ def decodeStream(req):
 
 class LlamaModel():
 	def __init__(self,url,name,sysmsg,stream=None,maxRespLen=None):
+		self.stream=False
 		self.headers={"Content-type": "application/json"}
 		self.url=url+'/completion'
 		self.name=name
@@ -77,30 +78,30 @@ class LlamaModel():
 		print('\n--------')
 		return result
 
-def chatOnce(llmmodel,messages):
-	nextToSpeak=None
+	def chatOnce(self,messages):
+		nextToSpeak=None
 
-	result=llmmodel.chatresp(messages)
-	resultl=result.lower()
+		result=self.chatresp(messages)
+		resultl=result.lower()
 
-	greatestIndex=-1
-	nextIndex=resultl.find('bob')
-	if(nextIndex>greatestIndex):
-		greatestIndex=nextIndex
-		nextToSpeak=1
-	nextIndex=resultl.find('eve')
-	if(nextIndex>greatestIndex):
-		greatestIndex=nextIndex
-		nextToSpeak=2
-	nextIndex=resultl.find('alice')
-	if(nextIndex>greatestIndex):
-		nextToSpeak=0
-	if(resultl.find('bob,')>=0):
-		nextToSpeak=1
-	elif(resultl.find('eve,')>=0):
-		nextToSpeak=2
-	elif(resultl.find('alice,')>=0):
-		nextToSpeak=0
+		greatestIndex=-1
+		nextIndex=resultl.find('bob')
+		if(nextIndex>greatestIndex):
+			greatestIndex=nextIndex
+			nextToSpeak=1
+		nextIndex=resultl.find('eve')
+		if(nextIndex>greatestIndex):
+			greatestIndex=nextIndex
+			nextToSpeak=2
+		nextIndex=resultl.find('alice')
+		if(nextIndex>greatestIndex):
+			nextToSpeak=0
+		if(resultl.find('bob,')>=0):
+			nextToSpeak=1
+		elif(resultl.find('eve,')>=0):
+			nextToSpeak=2
+		elif(resultl.find('alice,')>=0):
+			nextToSpeak=0
 
-	messages+=startTok+llmmodel.name+'\n'+result+'\n'
-	return messages,nextToSpeak
+		messages+=startTok+self.name+'\n'+result+'\n'
+		return messages,nextToSpeak
