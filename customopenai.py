@@ -1,5 +1,4 @@
 import json
-
 from urllib.request import Request, urlopen
 
 STREAM=False
@@ -14,7 +13,7 @@ responseLength=100
 def decodeStream(req):
 	response=''
 	result=''
-	READSZ=15
+	READSZ=20
 
 	#import pdb
 	#pdb.set_trace()
@@ -80,22 +79,6 @@ class LlamaModel():
 		print('\n--------')
 		return result
 
-#messages=startTok+'bob\nhi alice.'+endTok+'\n'
-messages=startTok+'eve\nhi alice.'+endTok+'\n'
-dolphin_url='http://192.168.68.107:8080'
-capybara_url='http://192.168.68.107:8090'
-airoboros_url='http://192.168.68.107:8070'
-
-#dolphin=LlamaModel(dolphin_url,'alice','you are alice.  you\'re role playing being a wizard at hogwarts with your friends bob and eve.  bob will speak after you.')
-#capybara=LlamaModel(capybara_url,'bob','you are bob.  you\'re role playing being a wizard at hogwarts with your friends alice and eve.  eve will speak after you.')
-#airoboros=LlamaModel(airoboros_url,'eve','you are eve.  you\'re role playing being a wizard at hogwarts with your friends alice and bob.  alice will speak after you.')
-#dolphin=LlamaModel(dolphin_url,'alice','you are alice.  you\'re role playing being a wizard at hogwarts with your friends bob and eve.  respond with ... to allow someone else to speak.')
-#capybara=LlamaModel(capybara_url,'bob','you are bob.  you\'re role playing being a wizard at hogwarts with your friends alice and eve.  respond with ... to allow someone else to speak.')
-#airoboros=LlamaModel(airoboros_url,'eve','you are eve.  you\'re role playing being a wizard at hogwarts with your friends alice and bob.  respond with ... to allow someone else to speak.')
-dolphin=LlamaModel(dolphin_url,'alice','you are alice.  you\'re role playing being a wizard at hogwarts with your friends bob and eve.  respond with ... to allow someone else to speak.')
-capybara=LlamaModel(capybara_url,'bob','you are bob.  you\'re role playing being a wizard at hogwarts with your friends alice and eve.  respond with ... to allow someone else to speak.')
-airoboros=LlamaModel(airoboros_url,'eve','you are eve.  you\'re role playing being a wizard at hogwarts with your friends alice and bob.  respond with ... to allow someone else to speak.')
-
 def chatOnce(llmmodel,messages):
 	nextToSpeak=None
 
@@ -123,20 +106,3 @@ def chatOnce(llmmodel,messages):
 
 	messages+=startTok+llmmodel.name+'\n'+result+'\n'
 	return messages,nextToSpeak
-
-models=[dolphin,capybara,airoboros]
-modelindex=0
-
-chatrounds=2
-for i in range(chatrounds):
-	messages,nextToSpeak=chatOnce(models[modelindex],messages)
-	if(nextToSpeak==None):
-		modelindex=(modelindex+1)%3
-	else:
-		modelindex=nextToSpeak
-	#messages=chatOnce(dolphin,messages)
-	#messages=chatOnce(capybara,messages)
-	#messages=chatOnce(airoboros,messages)
-
-#print()
-#print(result)
