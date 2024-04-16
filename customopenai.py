@@ -4,7 +4,7 @@ from urllib.request import Request, urlopen
 startTok='<|im_start|>'
 endTok='<|im_end|>'
 
-def decodeStream(req):
+def decodeStream(req,logprobs=False):
 	response=''
 	result=''
 	READSZ=20
@@ -32,11 +32,16 @@ def decodeStream(req):
 		x=json.loads(data)
 		content=x['content']
 		print(content,end='',flush=True)
+		if(logprobs):
+			print('\n')
+			print(x['completion_probabilities'])
+			print('\n')
 		result+=content
 
 class LlmModel():
-	def __init__(self,url,name,sysmsg,stream=None,maxRespLen=None):
+	def __init__(self,url,name,sysmsg,stream=None,maxRespLen=None,grammar=None,logprobs=None,top_k=None):
 		self.stream=False
+		self.logprobs=False
 		self.headers={"Content-type": "application/json"}
 		self.url=url+'/completion'
 		self.name=name
@@ -44,9 +49,8 @@ class LlmModel():
 		self.sysmsg=startTok+'system\n'+sysmsg+endTok+'\n'
 		self.trailer=startTok+self.name+'\n'
 		self.jsondata={
-			'beam_width':5,
+			#'beam_width':5,
 			'prompt':'',
-			'n_predict':maxRespLen,
 			'stop':[startTok,endTok],
 		}
 		if(stream):
@@ -54,6 +58,14 @@ class LlmModel():
 			self.jsondata['stream']=stream
 		if(maxRespLen):
 			self.jsondata['n_predict']=maxRespLen
+		if(top_k):
+			self.jsondata['top_k']=top_k
+		if(grammar):
+			self.jsondata['grammar']=grammar
+		if(logprobs):
+			self.logprobs=True
+			#self.jsondata['logprobs']=logprobs
+			self.jsondata['n_probs']=logprobs
 	def chatresp(self,messages):
 		#self.jsondata['prompt']=messages
 		self.jsondata['prompt']=self.sysmsg+messages+self.trailer
@@ -63,7 +75,7 @@ class LlmModel():
 			req=urlopen(request)
 
 			print(self.name+': ')
-			result=decodeStream(req)
+			result=decodeStream(req,self.logprobs)
 		else:
 			request=Request(method='POST', data=strdata.encode('utf-8'), headers=self.headers, url=self.url)
 			response=urlopen(request).read().decode('utf-8')
@@ -75,7 +87,12 @@ class LlmModel():
 			content=x['content']
 			print(content,end='',flush=True)
 			result+=content
+			if(self.logprobs):
+				print('\n')
+				print(x['completion_probabilities'])
 		print('\n--------')
+		#import pdb
+		#pdb.set_trace()
 		return result
 
 	def chatOnce(self,messages):
