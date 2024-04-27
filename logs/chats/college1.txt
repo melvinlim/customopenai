@@ -1,0 +1,15 @@
+alice:
+hi eve! how are you today?
+eve:
+i'm good, just studying for exams. how about you?
+alice:
+i'm doing well, just trying to finish up some assignments before the semester ends.
+
+bob:
+hey guys, what's up?
+eve:
+hi bob, not much, just chilling at the coffee shop.
+bob:
+oh, i see you're studying for exams, that's quite a lot of work. is there anything i can help you with?
+eve:
+nope, but thanks!

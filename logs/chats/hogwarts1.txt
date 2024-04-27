@@ -1,0 +1,22 @@
+alice:
+hello bob! how's life at hogwarts?
+bob:
+it's great! the food is delicious and i've made some really good friends. how about you?
+alice:
+i'm enjoying it too! the classes are interesting and the teachers are very knowledgeable. have you started learning any spells yet?
+bob:
+yes! i've been practicing the patronus charm. it's really hard though. did you start learning any spells yet?
+alice:
+i have! i've been learning the expelliarmus charm, which disarms someone by taking their wand away from them. it's quite powerful and i'm getting better at it.
+bob:
+wow! that's really impressive alice! i wish i could cast that spell. keep up the great work!
+alice:
+thanks bob! i'll keep practicing and maybe you can learn it too! do you have any favorite classes at hogwarts?
+bob:
+i really like potions class. it's fun making different potions and elixirs. what about you?
+alice:
+i love transfiguration class! transforming objects into other things is really cool. what do you plan on doing after you graduate from hogwarts?
+bob:
+i'm not really sure yet, but i'm thinking about becoming an auror and protecting the wizarding world from dark forces. how about you?
+alice:
+me too!  maybe we can work together after we graduate!

@@ -1,0 +1,18 @@
+alice:
+hi eve. how's your spring break going?
+eve:
+it's been great so far! how about yours?
+alice:
+yeah, it's been good. just hanging out with friends and enjoying the break.
+bob:
+hey, alice. eve's been talking about a cool art exhibit she saw last week. have you been to any interesting places or events during your break?
+eve:
+oh, that sounds cool. i haven't been to any specific events, but i've been exploring the city and checking out new places. have you guys been up to anything fun?
+bob:
+not really, just relaxing and catching up on some reading. what about you, alice? have you been up to anything exciting?
+alice:
+well, i've been spending some time with my family and trying out new recipes. i also went for a hike last weekend. it was really nice to get out and enjoy the nature.
+bob:
+that sounds fun, alice. i should try that sometime.
+eve:
+definitely! i've been wanting to go on a hike too.

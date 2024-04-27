@@ -1,0 +1,10 @@
+alice:
+Hello, Eve! How can I assist you today?
+eve:
+I was just wondering if you had any plans for this evening?
+alice:
+Nope, want to do anything?
+eve:
+Sure, let's meet up!
+alice:
+Sure!

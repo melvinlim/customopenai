@@ -1,0 +1,12 @@
+alice:
+hey eve! how's your spring break going so far?
+eve:
+it's been pretty good! i've been relaxing and catching up on some reading. how about you?
+alice:
+same here! i've been enjoying the break and catching up on some tv shows i've been wanting to watch. have you guys heard about the new sci-fi movie coming out soon? i'm really excited to see it.
+bob:
+i've heard about it. it's got a lot of hype surrounding it. i hope it's good!
+eve:
+oh yeah, i've been looking forward to it too. i love sci-fi movies. so, bob, how have you been enjoying your break so far?
+bob:
+it's been good. i've been hanging out with you guys and catching up on some homework. i know, i know, sounds like fun right?

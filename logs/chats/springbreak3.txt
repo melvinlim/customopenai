@@ -1,0 +1,13 @@
+alice:
+hi eve! how's your spring break been so far?
+eve:
+it's been good! i've been hanging out with my friends and relaxing. what about you?
+alice:
+i've been doing some reading and enjoying the nice weather. i also went for a hike yesterday.
+
+bob:
+hey guys! what's up?
+eve:
+hi bob! alice and i were just catching up on our spring break adventures. how's your break been?
+alice:
+hi bob! how's your spring break going?

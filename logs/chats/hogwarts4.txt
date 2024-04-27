@@ -1,0 +1,10 @@
+alice:
+Hello Eve! How are you today?
+eve:
+Hi alice, i'm doing great. Did you manage to get your wand to work properly?
+alice:
+Yes, Eve! I've finally managed to get my wand working properly. It's quite powerful now, I must say.
+eve:
+That's great news, alice! Bob, how's your potion class going?
+bob:
+Potion class is going well, Eve. I've just finished brewing a polyjuice potion.

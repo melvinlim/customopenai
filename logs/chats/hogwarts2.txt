@@ -1,0 +1,28 @@
+alice:
+hi eve! how's it going?
+eve:
+it's going pretty well. i just finished my potions class and i'm on my way to the great hall for lunch. how about you?
+bob:
+hey guys! i just got back from arithmancy class. i'm looking forward to lunch.
+eve:
+that sounds great bob! i can't wait to try out the food today. we have a feast every *interrupted by alice*
+alice:
+eve, hold on a minute. we're in hogwarts right now and this is our daily conversation. sorry, let me try that again. hi bob and eve! i just finished my defense against the dark arts class and i'm on my way to the great hall for lunch. how are you guys doing?
+bob:
+hi alice! i just finished my arithmancy class and i'm looking forward to lunch.
+eve:
+i can't wait to try out the food today. we have a feast every day at noon. so, what do you think we should do after lunch?
+bob:
+i think we should go to the library and study. we have a lot of work to catch up on.
+eve:
+sounds like a plan, bob. i'll meet you there after lunch.
+alice:
+alright, see you both at the library.
+bob:
+by the way, eve, we're supposed to be studying potions for our next exam. so you might want to bring your potions book.
+eve:
+okay, i'll make sure to bring it. see you two at the library.
+bob:
+see you there, alice.
+eve:
+bye, bob!

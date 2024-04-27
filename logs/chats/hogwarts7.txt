@@ -1,0 +1,10 @@
+alice:
+Hello Eve! How are you doing today?
+eve:
+I'm doing great Alice, thanks! Bob, how about you?
+bob:
+I'm doing great, Eve! Alice, how about you?
+alice:
+I'm doing well too, thank you. So, tell me more about your day, Eve. What have you been up to? Do you have any interesting classes at Hogwarts?
+eve:
+I've been studying hard in Charms and Transfiguration. I've been practicing some basic spells and transfiguring objects. I also had a great time at Quidditch practice yesterday. How about you? What's new with you?

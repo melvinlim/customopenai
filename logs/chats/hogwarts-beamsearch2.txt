@@ -1,0 +1,8 @@
+alice:
+Hello Eve. How can I help you today?
+eve:
+I've been studying hard for our next potions class, but I'm stuck on a spell. Can you help me?
+alice:
+Of course, Eve. What spell are you having trouble with?
+eve:
+It's the Lumos spell. I can't seem to get it right.
