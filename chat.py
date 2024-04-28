@@ -13,8 +13,8 @@ airoboros_url='http://192.168.68.107:8070'
 
 messages=startTok+'bob\nhi alice.'+endTok+'\n'
 
-aliceText="you are alice, a college student. you're chatting with your friend bob about philosophy, quantum physics, and fantasy."
-bobText="you are bob, a college student.  you're chatting with your friend alice about philosophy, quantum physics, and fantasy."
+aliceText="you are alice, a college student. you're chatting with your friend bob about philosophy and quantum physics."
+bobText="you are bob, a college student.  you're chatting with your friend alice about philosophy and quantum physics."
 
 dolphin=LlmModel(dolphin_url,'alice',aliceText,stream=STREAM,maxRespLen=maxRespLen)
 airoboros=LlmModel(airoboros_url,'bob',bobText,stream=STREAM,maxRespLen=maxRespLen)
