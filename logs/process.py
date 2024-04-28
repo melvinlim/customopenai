@@ -86,4 +86,5 @@ jsonData=[]
 for chat in chats:
 	print('processing: '+chat['title'])
 	if(chat['text']!=''):		#should have not added empty entries at all.  might fix this later.
-		jsonData += [processTexts(chat['text'])]
+		jsonData += processTexts(chat['text'])
+		#jsonData += [processTexts(chat['text'])]
