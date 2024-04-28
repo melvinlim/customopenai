@@ -28,10 +28,6 @@ import re
 #y=re.sub(':[\n]+','":"',x)
 #w=re.sub('[\n]+','","',y)
 
-#fd=open('zxcv.json','w')
-#fd.write(w)
-#fd.close()
-
 def readJson():
 	fd=open('zxcv.json','r')
 	z=fd.read()
@@ -50,7 +46,7 @@ def listfiles(PATH=''):
 	z=y.split('\n')
 	return z
 
-def processItem(item):
+def processItem1(item):
 	item=item.strip('\n')
 	x=item.replace(':\n','":"')
 	y=x.replace('\n','"},{"')
@@ -60,8 +56,29 @@ def processItem(item):
 	except:
 		print(z)
 		assert False
-	#import pdb
-	#pdb.set_trace()
+	return result
+
+def processItem2(item):
+	item=item.strip('\n')
+	x=item.replace(':\n',':')
+	y=x.replace('\n','","')
+	z='["'+y+'"]'
+	try:
+		result=json.loads(z)
+	except:
+		print(z)
+		assert False
+	return result
+
+def processItem3(item):
+	item=item.strip('\n')
+	y=item.replace('\n',' ')
+	z='{"story":"'+y+'"}'
+	try:
+		result=json.loads(z)
+	except:
+		print(z)
+		assert False
 	return result
 
 def processTexts(texts):
@@ -70,7 +87,7 @@ def processTexts(texts):
 	result=[]
 	y=texts.split('\n\n')
 	for x in y:
-		result += [processItem(x)]
+		result += [processItem3(x)]
 	return result
 
 fl=listfiles(PATH)
@@ -88,3 +105,23 @@ for chat in chats:
 	if(chat['text']!=''):		#should have not added empty entries at all.  might fix this later.
 		jsonData += processTexts(chat['text'])
 		#jsonData += [processTexts(chat['text'])]
+
+def saveData(jsonData,outputfile):
+	jsonString=json.dumps(jsonData)
+	fd=open(outputfile,'w')
+	fd.write(jsonString)
+	fd.close()
+
+def processSentence1(sent):
+	result = '{"story":"'+sent+'"}'
+	return result
+
+finalData=[]
+
+for conv in jsonData:
+	#print(conv)
+	for sentence in conv:
+		#print(sentence)
+		finalData += [processSentence1(sentence)]
+		
+saveData(jsonData,'result.json')
