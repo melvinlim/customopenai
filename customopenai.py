@@ -120,5 +120,5 @@ class LlmModel():
 		elif(resultl.find('alice,')>=0):
 			nextToSpeak=0
 
-		messages+=startTok+self.name+'\n'+result+'\n'
+		messages+=startTok+self.name+'\n'+result+'\n'+endTok
 		return messages,nextToSpeak
