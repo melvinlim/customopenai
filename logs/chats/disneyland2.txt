@@ -1,0 +1,4 @@
+alice:<|im_start|>bob, let's head to the Matterhorn Bobsleds next!<|im_end|>
+bob:<|im_start|> Sure, Alice! I've never been on that one before.<|im_end|>
+alice:<|im_start|> It's a pretty thrilling ride, Bob. Are you ready?<|im_end|>
+alice:<|im_start|>bob: Are you excited for the Matterhorn Bobsleds?<|im_end|>

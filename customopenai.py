@@ -38,6 +38,9 @@ def decodeStream(req,logprobs=False):
 			print('\n')
 		result+=content
 
+def getPreMsg(name):
+		return name+':'+startTok
+
 class LlmModel():
 	def __init__(self,url,name,sysmsg,stream=None,maxRespLen=None,grammar=None,logprobs=None,top_k=None):
 		self.stream=False
@@ -48,8 +51,10 @@ class LlmModel():
 		self.sysmsg=sysmsg
 		#self.sysmsg=startTok+'system\n'+sysmsg+endTok+'\n'
 		#self.trailer=startTok+self.name+":"
-		self.sysmsg='system:'+startTok+sysmsg+endTok+'\n'
-		self.trailer=self.name+':'+startTok
+		#self.sysmsg='system:'+startTok+sysmsg+endTok+'\n'
+		self.sysmsg=getPreMsg('system')+sysmsg+endTok+'\n'
+		#self.trailer=self.name+':'+startTok
+		self.trailer=getPreMsg(self.name)
 		self.jsondata={
 			#'beam_width':5,
 			'prompt':'',
@@ -123,5 +128,6 @@ class LlmModel():
 			nextToSpeak=0
 
 		#messages+=startTok+self.name+':'+result+endTok+'\n'
-		messages+=self.name+':'+startTok+result+endTok+'\n'
+		#messages+=self.name+':'+startTok+result+endTok+'\n'
+		messages+=getPreMsg(self.name)+result+endTok+'\n'
 		return messages,nextToSpeak
