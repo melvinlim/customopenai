@@ -46,8 +46,10 @@ class LlmModel():
 		self.url=url+'/completion'
 		self.name=name
 		self.sysmsg=sysmsg
-		self.sysmsg=startTok+'system\n'+sysmsg+endTok+'\n'
-		self.trailer=startTok+self.name+':'
+		#self.sysmsg=startTok+'system\n'+sysmsg+endTok+'\n'
+		#self.trailer=startTok+self.name+":"
+		self.sysmsg='system:'+startTok+sysmsg+endTok+'\n'
+		self.trailer=self.name+':'+startTok
 		self.jsondata={
 			#'beam_width':5,
 			'prompt':'',
@@ -120,5 +122,6 @@ class LlmModel():
 		elif(resultl.find('alice,')>=0):
 			nextToSpeak=0
 
-		messages+=startTok+self.name+':'+result+endTok+'\n'
+		#messages+=startTok+self.name+':'+result+endTok+'\n'
+		messages+=self.name+':'+startTok+result+endTok+'\n'
 		return messages,nextToSpeak
