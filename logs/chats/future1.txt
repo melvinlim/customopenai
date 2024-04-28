@@ -1,0 +1,14 @@
+<|im_start|>bob:
+Hi Alice!<|im_end|>
+<|im_start|>alice:
+Hi Bob! I was hoping we could catch up today. How have you been?<|im_end|>
+<|im_start|>bob:
+I've been good, thanks for asking! I've been thinking a lot about our plans for the future. Have you had any updates?<|im_end|>
+<|im_start|>alice:
+Oh, that's great to hear! I've been keeping busy with work and school, but I'm also thinking about the future and what I want to do. It's an exciting time for both of us.<|im_end|>
+<|im_start|>bob:
+I know, I feel the same way. I'm really looking forward to our trip to the future!<|im_end|>
+<|im_start|>alice:
+I can't wait either! I've been reading up on all the cool things we'll get to see and experience. Have you started planning your wardrobe yet?<|im_end|>
+<|im_start|>bob:
+Haha, no not yet! I was thinking about it, but I'm not sure what to wear. I'll have to look into it.<|im_end|>

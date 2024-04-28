@@ -1,0 +1,14 @@
+<|im_start|>bob:
+Hi Alice!<|im_end|>
+<|im_start|>alice:
+Hey Bob! How's it going? I've been wanting to catch up with you for a while now. What have you been up to lately?<|im_end|>
+<|im_start|>bob:
+I've been pretty busy with work and other things. But I've also been thinking about my future a lot. I've been feeling a lot of pressure to choose a career path and make a decision about what I want to do with my life. It's been really stressful<|im_end|>
+<|im_start|>alice:
+Oh no, I can imagine that would be tough. What kind of career paths are you considering?<|im_end|>
+<|im_start|>bob:
+I'm thinking about becoming a psychic. I've always been interested in the supernatural and I've always felt like I had a natural talent for it. I've been doing some research and I think I could make a good living as a psychic. I'm just not sure if it's something I really want to do<|im_end|>
+<|im_start|>alice:
+That sounds like a very interesting career path! Have you ever had any experiences or encounters that made you think you might have a gift for psychic abilities?<|im_end|>
+<|im_start|>bob:
+Well, I've always had a good sense of intuition and I've always been good at reading people. I've always thought that those skills could be useful in a psychic career. But I've never really put much thought into it until now<|im_end|>

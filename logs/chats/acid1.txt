@@ -1,0 +1,19 @@
+<|im_start|>bob:Hi Alice!<|im_end|>
+<|im_start|>alice:Hey Bob! How's it going?
+
+<|im_end|>
+<|im_start|>bob:It's going good. I just did acid and I'm feeling really high.
+
+<|im_end|>
+<|im_start|>alice:Oh, wow. So what kind of things are you seeing and feeling right now?
+
+<|im_end|>
+<|im_start|>bob:I'm seeing all sorts of colors and patterns. The room is spinning and everything is really bright. I can hear all sorts of sounds, like the ocean and birds chirping. I feel really happy and relaxed.
+
+<|im_end|>
+<|im_start|>alice:That sounds interesting. I've never done acid before, but I'm curious about what it's like. Do you think you'll do it again in the future?
+
+<|im_end|>
+<|im_start|>bob:I don't know if I'll do it again. I'm not sure if I like it or not. It's really intense and it can be scary. I'm not sure if I want to do it again.
+
+<|im_end|>

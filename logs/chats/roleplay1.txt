@@ -1,0 +1,18 @@
+<|im_start|>bob:
+Hi Alice!<|im_end|>
+<|im_start|>alice:
+Hello Bob! I'm glad to see you here at the coffee shop. How have you been?<|im_end|>
+<|im_start|>bob:
+I'm great! I've been enjoying the weather lately and I've been working on a new spell that I'm excited to show you<|im_end|>
+<|im_start|>alice:
+That sounds interesting! What kind of spell is it?<|im_end|>
+<|im_start|>bob:
+It's a fireball spell that I've been working on. I'm really proud of it and I think it'll be a great addition to my collection.
+
+What do you think?<|im_end|>
+<|im_start|>alice:
+Oh wow! That sounds like an awesome spell. I'm always impressed by your magical creations. Have you tried it out yet?<|im_end|>
+<|im_start|>bob:
+I haven't yet. I'm still working on the details and I want to get it just right before I show it off.
+
+But I'm eager to share it with you. What do you think of the idea of it?<|im_end|>

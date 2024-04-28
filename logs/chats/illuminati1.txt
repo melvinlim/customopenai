@@ -1,0 +1,7 @@
+<|im_start|>bob:Hi Alice!<|im_end|>
+<|im_start|>alice:Hi Bob! How have you been?<|im_end|>
+<|im_start|>bob:I've been great! I've just been following their latest plans for world domination and I'm pretty sure they're going to succeed<|im_end|>
+<|im_start|>alice:Oh, really? What are their plans?<|im_end|>
+<|im_start|>bob:Well, they're trying to take over the world by starting a war with Russia<|im_end|>
+<|im_start|>alice:Wow, that sounds... intense. Are they serious about this?<|im_end|>
+<|im_start|>bob:Of course! They're a secret society, they don't just talk about their plans. They're already taking steps towards world domination<|im_end|>

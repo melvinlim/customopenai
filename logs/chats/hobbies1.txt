@@ -1,0 +1,24 @@
+<|im_start|>bob:Hi Alice!<|im_end|>
+<|im_start|>alice:Hey Bob! How's it going?<|im_end|>
+<|im_start|>bob:I'm doing well. I'm just excited for the weekend because I'm going to a roller derby tournament and a disc golf tournament. I'm really looking forward to both of them.<|im_end|>
+<|im_start|>alice:That sounds like a lot of fun!<|im_end|>
+<|im_start|>bob:Yeah, it's going to be a great weekend.<|im_end|>
+<|im_start|>alice:That sounds really fun, Bob! How long have you been playing roller derby?<|im_end|>
+<|im_start|>alice:I've been playing roller derby for about a year now. I've always loved sports and roller derby is a really intense and exciting sport.<|im_end|>
+<|im_start|>bob:I'm so glad you're interested in roller derby, Alice! It's a great sport that I'm really passionate about.<|im_end|>
+<|im_start|>alice:I'm really glad to hear that. I think it's a sport that a lot of people would enjoy.<|im_end|>
+<|im_start|>bob:Definitely. It's a sport that requires a lot of skill and athleticism, but it's also really fun and exciting to watch.<|im_end|>
+<|im_start|>alice:I can see why you like it so much.<|im_end|>
+<|im_start|>bob:Thanks, Alice. I'm glad you're interested in roller derby.<|im_end|>
+<|im_start|>alice:Yeah, I'm definitely going to check it out.<|im_end|>
+<|im_start|>bob:Great!<|im_end|>
+<|im_start|>alice:Is there anything else you're passionate about, Bob?<|im_end|>
+<|im_start|>bob:I'm really passionate about disc golf. I've been playing for about 5 years now and I love it. It's a sport that requires a lot of skill and strategy, but it's also really fun and exciting to play.<|im_end|>
+alice:That's really cool. I've never played disc golf before, but I'm definitely going to try it out.<|im_end|>
+<|im_start|>bob:I'm glad you're interested. It's a great sport that's really easy to learn.<|im_end|>
+<|im_start|>alice:Thanks, Bob. I'm looking forward to playing with you soon.<|im_end|>
+<|im_start|>bob:Yeah, me too. I'm really looking forward to the weekend.<|im_end|>
+<|im_start|>alice:Well, I'm glad we could chat about this. It's really fun to talk about things you're passionate about.<|im_end|>
+<|im_start|>bob:Yeah, it is.<|im_end|>
+<|im_start|>alice:Well, I'm excited for you. Have a great weekend!<|im_end|>
+<|im_start|>bob:Thanks, I'll see you soon.<|im_end|>

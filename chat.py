@@ -14,8 +14,11 @@ raven_url='http://192.168.68.107:8060'
 
 messages=startTok+'bob:Hi Alice!'+endTok+'\n'
 
-aliceText="you are alice, a college student. you're chatting with your friend bob about philosophy and quantum physics."
-bobText="you are bob, a college student.  you're chatting with your friend alice about philosophy and quantum physics."
+#aliceText="you are alice, a college student. you're chatting with your friend bob about philosophy and quantum physics."
+aliceText="you are alice and you're trying to get to know your friend bob at a coffee shop."
+#bobText="you are bob and you're chatting with your friend alice. you enjoy role playing as a psychic."
+#bobText="you are bob and you're chatting with your friend alice. you're paranoid and you think the illuminati is after you."
+bobText="you are bob and you're chatting with your friend alice. you just did acid and are really high."
 
 dolphin=LlmModel(dolphin_url,'alice',aliceText,stream=STREAM,maxRespLen=maxRespLen)
 airoboros=LlmModel(raven_url,'bob',bobText,stream=STREAM,maxRespLen=maxRespLen)

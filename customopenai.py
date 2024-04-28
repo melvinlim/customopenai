@@ -47,7 +47,7 @@ class LlmModel():
 		self.name=name
 		self.sysmsg=sysmsg
 		self.sysmsg=startTok+'system\n'+sysmsg+endTok+'\n'
-		self.trailer=startTok+self.name+'\n'
+		self.trailer=startTok+self.name+':'
 		self.jsondata={
 			#'beam_width':5,
 			'prompt':'',
