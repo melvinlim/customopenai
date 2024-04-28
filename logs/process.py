@@ -137,4 +137,7 @@ for conv in jsonData:
 		#print(sentence)
 		finalData += [processSentence1(sentence)]
 		
-saveData(jsonData,'result.json')
+#saveData(jsonData,'result.json')
+mid=int(len(jsonData)/2)
+saveData(jsonData[:mid],'data00.json')
+saveData(jsonData[mid:],'data01.json')
