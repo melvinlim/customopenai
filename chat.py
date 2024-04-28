@@ -11,7 +11,7 @@ endTok='<|im_end|>'
 dolphin_url='http://192.168.68.107:8080'
 airoboros_url='http://192.168.68.107:8070'
 
-messages=startTok+'bob\nhi alice.'+endTok+'\n'
+messages=startTok+'bob:hi alice.'+endTok+'\n'
 
 aliceText="you are alice, a college student. you're chatting with your friend bob about philosophy and quantum physics."
 bobText="you are bob, a college student.  you're chatting with your friend alice about philosophy and quantum physics."

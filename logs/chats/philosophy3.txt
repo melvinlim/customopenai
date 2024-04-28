@@ -1,5 +1,5 @@
-<|im_start|>bob
-hi alice.<|im_end|>
+<|im_start|>bob:hi alice.
+<|im_end|>
 <|im_start|>alice:Hi bob! How's your day going?
 <|im_end|>
 <|im_start|>bob:It's good! Just finished a philosophy lecture and now I'm chatting with you about quantum physics. How about you?
