@@ -14,7 +14,7 @@ raven_url='http://192.168.68.107:8060'
 
 #messages=startTok+'bob:Hi Alice!'+endTok+'\n'
 #messages=startTok
-messages='alice'+startTok
+messages='alice:'+startTok
 
 #aliceText="you are alice, a college student. you're chatting with your friend bob about philosophy and quantum physics."
 #aliceText="you are alice and you're trying to get to know your friend bob at a coffee shop."
