@@ -12,13 +12,16 @@ dolphin_url='http://192.168.68.107:8080'		#great at discussing quantum physics a
 airoboros_url='http://192.168.68.107:8070'	#seems to perform better at functions.  also knowledgeable of fantasy books.
 raven_url='http://192.168.68.107:8060'
 
-messages=startTok+'bob:Hi Alice!'+endTok+'\n'
+#messages=startTok+'bob:Hi Alice!'+endTok+'\n'
+messages=startTok
 
 #aliceText="you are alice, a college student. you're chatting with your friend bob about philosophy and quantum physics."
-aliceText="you are alice and you're trying to get to know your friend bob at a coffee shop."
+#aliceText="you are alice and you're trying to get to know your friend bob at a coffee shop."
+aliceText="you are alice and you're exploring the grand bazaar with your friend bob.  you discuss the items for sale at various stalls."
 #bobText="you are bob and you're chatting with your friend alice. you enjoy role playing as a psychic."
 #bobText="you are bob and you're chatting with your friend alice. you're paranoid and you think the illuminati is after you."
-bobText="you are bob and you're chatting with your friend alice. you just did acid and are really high."
+#bobText="you are bob and you're chatting with your friend alice. you just did acid and are really high."
+bobText="you are bob and you're exploring the grand bazaar with your friend alice.  you discuss the items for sale at various stalls."
 
 dolphin=LlmModel(dolphin_url,'alice',aliceText,stream=STREAM,maxRespLen=maxRespLen)
 airoboros=LlmModel(raven_url,'bob',bobText,stream=STREAM,maxRespLen=maxRespLen)

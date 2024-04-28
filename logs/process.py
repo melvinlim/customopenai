@@ -81,13 +81,26 @@ def processItem3(item):
 		assert False
 	return result
 
+def processItem4(item):
+	item=item.strip('\n')
+	y=item.replace('\n',' ')
+	y=y.replace('<|im_start|>','')
+	y=y.replace('<|im_end|>','')
+	z='{"story":"'+y+'"}'
+	try:
+		result=json.loads(z)
+	except:
+		print(z)
+		assert False
+	return result
+
 def processTexts(texts):
 	#import pdb
 	#pdb.set_trace()
 	result=[]
 	y=texts.split('\n\n')
 	for x in y:
-		result += [processItem3(x)]
+		result += [processItem4(x)]
 	return result
 
 fl=listfiles(PATH)
