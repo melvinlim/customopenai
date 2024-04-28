@@ -8,16 +8,17 @@ maxRespLen=200
 startTok='<|im_start|>'
 endTok='<|im_end|>'
 
-dolphin_url='http://192.168.68.107:8080'
-airoboros_url='http://192.168.68.107:8070'
+dolphin_url='http://192.168.68.107:8080'		#great at discussing quantum physics and philosophy.
+airoboros_url='http://192.168.68.107:8070'	#seems to perform better at functions.  also knowledgeable of fantasy books.
+raven_url='http://192.168.68.107:8060'
 
-messages=startTok+'bob:hi alice.'+endTok+'\n'
+messages=startTok+'bob:Hi Alice!'+endTok+'\n'
 
 aliceText="you are alice, a college student. you're chatting with your friend bob about philosophy and quantum physics."
 bobText="you are bob, a college student.  you're chatting with your friend alice about philosophy and quantum physics."
 
 dolphin=LlmModel(dolphin_url,'alice',aliceText,stream=STREAM,maxRespLen=maxRespLen)
-airoboros=LlmModel(airoboros_url,'bob',bobText,stream=STREAM,maxRespLen=maxRespLen)
+airoboros=LlmModel(raven_url,'bob',bobText,stream=STREAM,maxRespLen=maxRespLen)
 
 models=[dolphin,airoboros]
 modelindex=0

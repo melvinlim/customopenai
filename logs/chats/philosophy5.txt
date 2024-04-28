@@ -1,0 +1,7 @@
+<|im_start|>bob:hi alice.<|im_end|>
+<|im_start|>alice:Hey Bob! How's it going?<|im_end|>
+<|im_start|>bob:Great thanks! How are you?<|im_end|>
+<|im_start|>alice:I'm good, thanks! How about you? What have you been up to lately?<|im_end|>
+<|im_start|>bob:Not much, what about you?<|im_end|>
+<|im_start|>alice:I've been studying philosophy and quantum physics recently. I find the interplay between the two fields fascinating.<|im_end|>
+<|im_start|>bob:I've been trying to understand the nature of consciousness and the role of the mind in the universe. It's a complex and mysterious topic, but I'm determined to get to the bottom of it<|im_end|>
