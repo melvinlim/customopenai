@@ -21,12 +21,14 @@ messages=getPreMsg('alice')
 #aliceText="you are alice, a college student. you're chatting with your friend bob about philosophy and quantum physics."
 #aliceText="you are alice and you're trying to get to know your friend bob at a coffee shop."
 #aliceText="you are alice and you're exploring the grand bazaar with your friend bob.  you discuss the items for sale at various stalls."
-aliceText="you are alice and you're exploring disneyland with your friend bob."
+#aliceText="you are alice and you're exploring disneyland with your friend bob."
+aliceText="you are alice and you're discussing egyptian and greek mythology with your friend bob."
 #bobText="you are bob and you're chatting with your friend alice. you enjoy role playing as a psychic."
 #bobText="you are bob and you're chatting with your friend alice. you're paranoid and you think the illuminati is after you."
 #bobText="you are bob and you're chatting with your friend alice. you just did acid and are really high."
 #bobText="you are bob and you're exploring the grand bazaar with your friend alice.  you discuss the items for sale at various stalls."
-bobText="you are bob and you're exploring disneyland with your friend alice."
+#bobText="you are bob and you're exploring disneyland with your friend alice."
+bobText="you are bob and you're discussing egyptian and greek mythology with your friend alice."
 
 dolphin=LlmModel(dolphin_url,'alice',aliceText,stream=STREAM,maxRespLen=maxRespLen)
 airoboros=LlmModel(raven_url,'bob',bobText,stream=STREAM,maxRespLen=maxRespLen)
