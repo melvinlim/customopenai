@@ -1,5 +1,6 @@
 import json
 PATH='chats'
+PATH='fixedScripts'
 def readDataJson():
 	a=open('data49.json','r')
 	b=a.read()
@@ -86,7 +87,10 @@ def processItem4(item):
 	y=item.replace('\n',' ')
 	y=y.replace('<|im_start|>','')
 	y=y.replace('<|im_end|>','')
+	y=y.replace('"','\\"')
 	z='{"story":"'+y+'"}'
+	#import pdb
+	#pdb.set_trace()
 	try:
 		result=json.loads(z)
 	except:
@@ -103,14 +107,16 @@ def processTexts(texts):
 		result += [processItem4(x)]
 	return result
 
-fl=listfiles(PATH)
-
 chats=[]
 
-for x in fl:
-	print('reading: '+x)
-	chats += [{'title':x,'text':readText(x,PATH)}]
-	#print(x)
+def readFromPath(chats,PATH):
+	fl=listfiles(PATH)
+	for x in fl:
+		print('reading: '+x)
+		chats += [{'title':x,'text':readText(x,PATH)}]
+		#print(x)
+
+readFromPath(chats,PATH)
 
 jsonData=[]
 for chat in chats:
@@ -147,7 +153,7 @@ mid=int(len(jsonData)/2)
 saveData(jsonData[:mid],'data00.json')
 saveData(jsonData[mid:],'data01.json')
 
-#z=readText('scripts/seinfeld-ep1.txt')
+z=readText('scripts/seinfeld-ep1.txt')
 
 def processSeinfeld1(script):
 	script=script.replace(':','-')
@@ -159,5 +165,18 @@ def processSeinfeld1(script):
 	c=re.sub('<endtok>','\n',b)
 	return c
 
-#x=processSeinfeld1(z)
-#saveText(x,'tmp.txt')
+def splitAndSaveSeinfeld(data):
+	x=processSeinfeld1(data)
+	#saveText(x,'tmp.txt')
+
+	x=x.replace('JERRY','<SPLIT>JERRY')
+	z=x.split('<SPLIT>')
+
+	y=len(z)
+	i=0
+	while(i<y):
+		data=''.join(z[i:i+10])
+		saveText(data,'seinfeld-ep1-'+str(i)+'.txt')
+		i+=10
+
+splitAndSaveSeinfeld(z)
