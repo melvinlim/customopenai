@@ -119,6 +119,11 @@ for chat in chats:
 		jsonData += processTexts(chat['text'])
 		#jsonData += [processTexts(chat['text'])]
 
+def saveText(data,outputfile):
+	fd=open(outputfile,'w')
+	fd.write(data)
+	fd.close()
+
 def saveData(jsonData,outputfile):
 	jsonString=json.dumps(jsonData)
 	fd=open(outputfile,'w')
@@ -141,3 +146,18 @@ for conv in jsonData:
 mid=int(len(jsonData)/2)
 saveData(jsonData[:mid],'data00.json')
 saveData(jsonData[mid:],'data01.json')
+
+#z=readText('scripts/seinfeld-ep1.txt')
+
+def processSeinfeld1(script):
+	script=script.replace(':','-')
+	x=re.sub(r'([A-Z]+)\n[ ]+',r'\1:\n',script)
+	y=re.sub(r'(  )+[ \n]*','',x)
+	z=re.sub(r'[\n][ \n]+',r'<endtok>',y)
+	a=re.sub('\n','',z)
+	b=re.sub(':',':\n',a)
+	c=re.sub('<endtok>','\n',b)
+	return c
+
+#x=processSeinfeld1(z)
+#saveText(x,'tmp.txt')
