@@ -139,12 +139,15 @@ def processSeinfeld1(script):
 	c=re.sub('<endtok>','\n',b)
 	return c
 
-def splitAndSaveSeinfeld(data,name='seinfeld'):
+def splitAndSaveSeinfeld(filename):
+	data=readText('scripts/seinfeld/'+filename)
 	x=processSeinfeld1(data)
 	#saveText(x,'tmp.txt')
 
 	x=x.replace('JERRY','<SPLIT>JERRY')
 	z=x.split('<SPLIT>')
+
+	name=filename.strip('.txt')
 
 	y=len(z)
 	i=0
@@ -188,10 +191,10 @@ def splitAndSaveFriends(data):
 	#	saveText(data,'friends-'+str(i)+'.txt')
 	#	i+=10
 
-z=readText('scripts/seinfeld/seinfeld-ep1.txt')
-splitAndSaveSeinfeld(z,'seinfeld-ep1')
-z=readText('scripts/seinfeld/seinfeld-ep2.txt')
-splitAndSaveSeinfeld(z,'seinfeld-ep2')
+z=listfiles('scripts/seinfeld')
+for fn in z:
+	if(len(fn)>4):
+		splitAndSaveSeinfeld(fn)
 
 z=readText('scripts/Friends_Transcript.txt')
 splitAndSaveFriends(z)
@@ -220,3 +223,4 @@ for conv in jsonData:
 mid=int(len(jsonData)/2)
 saveData(jsonData[:mid],'data00.json')
 saveData(jsonData[mid:],'data01.json')
+
