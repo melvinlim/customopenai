@@ -101,10 +101,11 @@ def processItem4(item):
 def processTexts(texts):
 	#import pdb
 	#pdb.set_trace()
-	result=[]
-	y=texts.split('\n\n')
-	for x in y:
-		result += [processItem4(x)]
+	#result=[]
+	#y=texts.split('\n\n')
+	#for x in y:
+	#	result += [processItem4(x)]
+	result = [processItem4(texts)]
 	return result
 
 chats=[]
@@ -153,7 +154,7 @@ mid=int(len(jsonData)/2)
 saveData(jsonData[:mid],'data00.json')
 saveData(jsonData[mid:],'data01.json')
 
-z=readText('scripts/seinfeld-ep1.txt')
+#z=readText('scripts/seinfeld-ep1.txt')
 
 def processSeinfeld1(script):
 	script=script.replace(':','-')
@@ -179,4 +180,4 @@ def splitAndSaveSeinfeld(data):
 		saveText(data,'seinfeld-ep1-'+str(i)+'.txt')
 		i+=10
 
-splitAndSaveSeinfeld(z)
+#splitAndSaveSeinfeld(z)
