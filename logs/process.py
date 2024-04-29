@@ -153,11 +153,6 @@ def splitAndSaveSeinfeld(data,name='seinfeld'):
 		saveText(data,'fixedScripts/'+name+'-'+str(i)+'.txt')
 		i+=10
 
-z=readText('scripts/seinfeld/seinfeld-ep1.txt')
-splitAndSaveSeinfeld(z,'seinfeld-ep1')
-z=readText('scripts/seinfeld/seinfeld-ep2.txt')
-splitAndSaveSeinfeld(z,'seinfeld-ep2')
-
 def processFriends(script):
 	#x=re.sub(r'End\n.+\nWritten.+\n',r'EPISODEEND',z,flags=re.MULTILINE)
 	#x=re.sub(r'End\n.+\nWritten.+\n\[.+\]',r'EPISODEEND',z)
@@ -184,7 +179,7 @@ def splitAndSaveFriends(data):
 	for z in x:
 		if(len(z)>1):
 			i+=1
-			saveText(z.strip('\n'),'friends-'+str(i)+'.txt')
+			saveText(z.strip('\n'),'fixedScripts/friends-'+str(i)+'.txt')
 			#saveText(z,'friends-'+str(i)+'.txt')
 	#y=len(x)
 	#i=0
@@ -193,8 +188,13 @@ def splitAndSaveFriends(data):
 	#	saveText(data,'friends-'+str(i)+'.txt')
 	#	i+=10
 
-#z=readText('scripts/Friends_Transcript.txt')
-#splitAndSaveFriends(z)
+z=readText('scripts/seinfeld/seinfeld-ep1.txt')
+splitAndSaveSeinfeld(z,'seinfeld-ep1')
+z=readText('scripts/seinfeld/seinfeld-ep2.txt')
+splitAndSaveSeinfeld(z,'seinfeld-ep2')
+
+z=readText('scripts/Friends_Transcript.txt')
+splitAndSaveFriends(z)
 
 chats=[]
 
