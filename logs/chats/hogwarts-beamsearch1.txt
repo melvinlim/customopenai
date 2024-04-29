@@ -5,7 +5,7 @@ I'm just practicing some spells in the garden. I need to learn to control them b
 alice:
 That sounds like a good idea, Eve. As for myself, I'm currently working on a spell that can enhance the properties of potions. It's quite challenging, but I'm making progress.
 eve:
-That's fantastic, Alice! I'm sure your skills will be very valuable when you become a potions master. By the way, have you heard about the new class that's being offered next term? It's called \"Advanced Transfiguration\" and it sounds really interesting.
+That's fantastic, Alice! I'm sure your skills will be very valuable when you become a potions master. By the way, have you heard about the new class that's being offered next term? It's called "Advanced Transfiguration" and it sounds really interesting.
 alice:
 I have heard about it, Eve. The class seems quite intriguing, and I'm considering taking it. What are your thoughts on it?
 eve:

@@ -1,6 +1,5 @@
 import json
-PATH='chats'
-PATH='fixedScripts'
+PATHS=['chats','fixedScripts']
 def readDataJson():
 	a=open('data49.json','r')
 	b=a.read()
@@ -117,7 +116,8 @@ def readFromPath(chats,PATH):
 		chats += [{'title':x,'text':readText(x,PATH)}]
 		#print(x)
 
-readFromPath(chats,PATH)
+for PATH in PATHS:
+	readFromPath(chats,PATH)
 
 jsonData=[]
 for chat in chats:
