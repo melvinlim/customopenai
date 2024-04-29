@@ -154,7 +154,7 @@ mid=int(len(jsonData)/2)
 saveData(jsonData[:mid],'data00.json')
 saveData(jsonData[mid:],'data01.json')
 
-#z=readText('scripts/seinfeld-ep1.txt')
+z=readText('scripts/seinfeld-ep1.txt')
 
 def processSeinfeld1(script):
 	script=script.replace(':','-')
@@ -180,4 +180,42 @@ def splitAndSaveSeinfeld(data):
 		saveText(data,'seinfeld-ep1-'+str(i)+'.txt')
 		i+=10
 
-#splitAndSaveSeinfeld(z)
+splitAndSaveSeinfeld(z)
+
+def processFriends(script):
+	#x=re.sub(r'End\n.+\nWritten.+\n',r'EPISODEEND',z,flags=re.MULTILINE)
+	#x=re.sub(r'End\n.+\nWritten.+\n\[.+\]',r'EPISODEEND',z)
+	#x=re.sub(r'End\n.+\nWritten.+\n',r'EPISODEEND',z)
+	x=re.sub(r'End\n.+\nWritten.+\n','',script)
+	x=re.sub(r'\[.+\]','<SCENE>',x)
+	x=re.sub(r'THE END','<SCENE>',x)
+	x=re.sub(r'Opening Credits','',x)
+	x=re.sub(r'Closing Credits','',x)
+	x=re.sub(r'Ending Credits','',x)
+	x=re.sub(r'Credits','',x)
+	x=re.sub(r'Thanksgiving 1915','',x)
+	x=re.sub(r'[cC]ommercial [Bb]reak','',x)
+	x=re.sub(r'<SCENE>[\n]*<SCENE>','',x)
+	return x
+
+def splitAndSaveFriends(data):
+	x=processFriends(data)
+	#saveText(x,'tmp.txt')
+	x=x.split('<SCENE>')
+	x=x[1:-1]		#first and last entries are not scenes.
+
+	i=0	
+	for z in x:
+		if(len(z)>1):
+			i+=1
+			saveText(z.strip('\n'),'friends-'+str(i)+'.txt')
+			#saveText(z,'friends-'+str(i)+'.txt')
+	#y=len(x)
+	#i=0
+	#while(i<y):
+	#	data=''.join(z[i:i+10])
+	#	saveText(data,'friends-'+str(i)+'.txt')
+	#	i+=10
+
+#z=readText('scripts/Friends_Transcript.txt')
+#splitAndSaveFriends(z)
