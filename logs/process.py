@@ -107,24 +107,12 @@ def processTexts(texts):
 	result = [processItem4(texts)]
 	return result
 
-chats=[]
-
 def readFromPath(chats,PATH):
 	fl=listfiles(PATH)
 	for x in fl:
 		print('reading: '+x)
 		chats += [{'title':x,'text':readText(x,PATH)}]
 		#print(x)
-
-for PATH in PATHS:
-	readFromPath(chats,PATH)
-
-jsonData=[]
-for chat in chats:
-	print('processing: '+chat['title'])
-	if(chat['text']!=''):		#should have not added empty entries at all.  might fix this later.
-		jsonData += processTexts(chat['text'])
-		#jsonData += [processTexts(chat['text'])]
 
 def saveText(data,outputfile):
 	fd=open(outputfile,'w')
@@ -140,19 +128,6 @@ def saveData(jsonData,outputfile):
 def processSentence1(sent):
 	result = '{"story":"'+sent+'"}'
 	return result
-
-finalData=[]
-
-for conv in jsonData:
-	#print(conv)
-	for sentence in conv:
-		#print(sentence)
-		finalData += [processSentence1(sentence)]
-		
-#saveData(jsonData,'result.json')
-mid=int(len(jsonData)/2)
-saveData(jsonData[:mid],'data00.json')
-saveData(jsonData[mid:],'data01.json')
 
 def processSeinfeld1(script):
 	script=script.replace(':','-')
@@ -220,3 +195,28 @@ def splitAndSaveFriends(data):
 
 #z=readText('scripts/Friends_Transcript.txt')
 #splitAndSaveFriends(z)
+
+chats=[]
+
+for PATH in PATHS:
+	readFromPath(chats,PATH)
+
+jsonData=[]
+for chat in chats:
+	print('processing: '+chat['title'])
+	if(chat['text']!=''):		#should have not added empty entries at all.  might fix this later.
+		jsonData += processTexts(chat['text'])
+		#jsonData += [processTexts(chat['text'])]
+
+finalData=[]
+
+for conv in jsonData:
+	#print(conv)
+	for sentence in conv:
+		#print(sentence)
+		finalData += [processSentence1(sentence)]
+		
+#saveData(jsonData,'result.json')
+mid=int(len(jsonData)/2)
+saveData(jsonData[:mid],'data00.json')
+saveData(jsonData[mid:],'data01.json')
