@@ -7,6 +7,7 @@ for t in z:
 	#import pdb
 	#pdb.set_trace()
 	#print(t['story'])
-	if(t['story'].find('JERRY')>=0):
+	#if(t['story'].find('JERRY')>=0):
+	if(t['story'].find('jerry')>=0):
 		print(t['story'])
 		input()

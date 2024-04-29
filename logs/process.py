@@ -87,6 +87,7 @@ def processItem4(item):
 	y=y.replace('<|im_start|>','')
 	y=y.replace('<|im_end|>','')
 	y=y.replace('"','\\"')
+	y=y.lower()
 	z='{"story":"'+y+'"}'
 	#import pdb
 	#pdb.set_trace()
