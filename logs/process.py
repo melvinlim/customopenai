@@ -154,8 +154,6 @@ mid=int(len(jsonData)/2)
 saveData(jsonData[:mid],'data00.json')
 saveData(jsonData[mid:],'data01.json')
 
-z=readText('scripts/seinfeld-ep1.txt')
-
 def processSeinfeld1(script):
 	script=script.replace(':','-')
 	x=re.sub(r'([A-Z]+)\n[ ]+',r'\1:\n',script)
@@ -166,7 +164,7 @@ def processSeinfeld1(script):
 	c=re.sub('<endtok>','\n',b)
 	return c
 
-def splitAndSaveSeinfeld(data):
+def splitAndSaveSeinfeld(data,name='seinfeld'):
 	x=processSeinfeld1(data)
 	#saveText(x,'tmp.txt')
 
@@ -177,10 +175,13 @@ def splitAndSaveSeinfeld(data):
 	i=0
 	while(i<y):
 		data=''.join(z[i:i+10])
-		saveText(data,'seinfeld-ep1-'+str(i)+'.txt')
+		saveText(data,'fixedScripts/'+name+'-'+str(i)+'.txt')
 		i+=10
 
-splitAndSaveSeinfeld(z)
+z=readText('scripts/seinfeld/seinfeld-ep1.txt')
+splitAndSaveSeinfeld(z,'seinfeld-ep1')
+z=readText('scripts/seinfeld/seinfeld-ep2.txt')
+splitAndSaveSeinfeld(z,'seinfeld-ep2')
 
 def processFriends(script):
 	#x=re.sub(r'End\n.+\nWritten.+\n',r'EPISODEEND',z,flags=re.MULTILINE)
