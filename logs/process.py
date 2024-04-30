@@ -73,6 +73,7 @@ def processItem2(item):
 def processItem3(item):
 	item=item.strip('\n')
 	y=item.replace('\n',' ')
+	y=y.replace('\t',' ')
 	z='{"story":"'+y+'"}'
 	try:
 		result=json.loads(z)
@@ -87,6 +88,9 @@ def processItem4(item):
 	y=y.replace('<|im_start|>','')
 	y=y.replace('<|im_end|>','')
 	y=y.replace('"','\\"')
+	y=y.replace('“','\\"')
+	y=y.replace('”','\\"')
+	y=y.replace('\t',' ')
 	y=y.lower()
 	z='{"story":"'+y+'"}'
 	#import pdb
@@ -94,6 +98,8 @@ def processItem4(item):
 	try:
 		result=json.loads(z)
 	except:
+		import pdb
+		pdb.set_trace()
 		print(z)
 		assert False
 	return result
@@ -191,6 +197,41 @@ def splitAndSaveFriends(data):
 	#	data=''.join(z[i:i+10])
 	#	saveText(data,'friends-'+str(i)+'.txt')
 	#	i+=10
+
+def processFrasier1(script):
+	#script=script.replace(':','-')
+	script=script.replace('[','(')
+	script=script.replace(']',')')
+	#x=re.sub(r'FADE.+[\n]+.*[\n]+.cene.+\n',r'',script,flags=re.MULTILINE)
+	x=re.sub(r'End.+[\n]+.*[\n]+.cene.+\n',r'<SCENE>',script,flags=re.MULTILINE)
+	x=re.sub(r'FADE.+[\n]+.*[\n]+.cene.+\n',r'<SCENE>',x,flags=re.MULTILINE)
+	x=re.sub(r'([A-Za-z]+):',r'<SENTENCE>\1:',x)
+	x=re.sub(r'[ \n]+',r' ',x)
+	x=re.sub(r'[ ]*<SENTENCE>[ ]*',' ',x)
+	c=x
+	#x=re.sub(r'([A-Z]+)\n[ ]+',r'\1:\n',script)
+	#y=re.sub(r'(  )+[ \n]*','',x)
+	#z=re.sub(r'[\n][ \n]+',r'<endtok>',y)
+	#a=re.sub('\n','',z)
+	#b=re.sub(':',':\n',a)
+	#c=re.sub('<endtok>','\n',b)
+	return c
+
+def splitAndSaveFrasier(filename):
+	data=readText('scripts/frasier/'+filename)
+	x=processFrasier1(data)
+	x=x.split('<SCENE>')
+	name=filename.strip('.txt')
+	y=len(x)
+	i=0
+	while(i<y):
+		data=x[i]
+		saveText(data,'fixedScripts/'+name+'-'+str(i)+'.txt')
+		i+=1
+
+filename='frasier-1-2.txt'
+splitAndSaveFrasier(filename)
+#saveText(asdf,'tmp.txt')
 
 z=listfiles('scripts/seinfeld')
 for fn in z:
