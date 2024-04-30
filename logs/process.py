@@ -204,7 +204,7 @@ def processFrasier1(script):
 	script=script.replace(']',')')
 	#x=re.sub(r'FADE.+[\n]+.*[\n]+.cene.+\n',r'',script,flags=re.MULTILINE)
 	x=re.sub(r'End.+[\n]+.*[\n]+.cene.+\n',r'<SCENE>',script,flags=re.MULTILINE)
-	x=re.sub(r'FADE.+[\n]+.*[\n]+.cene.+\n',r'<SCENE>',x,flags=re.MULTILINE)
+	x=re.sub(r'FADE.*[\n]+.*[\n]+.cene.+\n',r'<SCENE>',x,flags=re.MULTILINE)
 	x=re.sub(r'([A-Za-z]+):',r'<SENTENCE>\1:',x)
 	x=re.sub(r'[ \n]+',r' ',x)
 	x=re.sub(r'[ ]*<SENTENCE>[ ]*',' ',x)
@@ -229,8 +229,10 @@ def splitAndSaveFrasier(filename):
 		saveText(data,'fixedScripts/'+name+'-'+str(i)+'.txt')
 		i+=1
 
-filename='frasier-1-2.txt'
-splitAndSaveFrasier(filename)
+z=listfiles('scripts/frasier')
+for fn in z:
+	if(len(fn)>4):
+		splitAndSaveFrasier(fn)
 #saveText(asdf,'tmp.txt')
 
 z=listfiles('scripts/seinfeld')
