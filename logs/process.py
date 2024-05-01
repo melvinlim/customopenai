@@ -152,6 +152,7 @@ def processSeinfeld1(script):
 	a=re.sub('\n','',z)
 	b=re.sub(':',':\n',a)
 	c=re.sub('<endtok>','\n',b)
+	c=re.sub(r'\([sS]cene [eE]nd.*\)','',c)
 	return c
 
 def splitAndSaveSeinfeld(filename):
