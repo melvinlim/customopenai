@@ -180,6 +180,7 @@ def processFriends(script):
 	#x=re.sub(r'End\n.+\nWritten.+\n',r'EPISODEEND',z)
 	script=script.lower()
 	x=re.sub(r'[^\x00-\x7F]+', ' ', script)
+	x=re.sub(r'end.*[\n]+.+[\n]+.+\n+.transcribe.+','',x)
 	x=re.sub(r'end.*[\n]+.+[\n]+.*written.+','',x)
 	x=re.sub(r'end.*[\n]+.+[\n]+.+\n+.*written.+','',x)
 	x=re.sub(r'end.*[\n]+.+[\n]+.*story.+','',x)
