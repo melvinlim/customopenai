@@ -94,6 +94,7 @@ def processItem4(item):
 	y=y.replace('>',')')
 	y=y.replace('{','(')
 	y=y.replace('}',')')
+	y=re.sub(r'[^\x00-\x7F]+', ' ', y)
 	y=y.replace('“','\\"')
 	y=y.replace('”','\\"')
 	y=y.replace('\t',' ')
