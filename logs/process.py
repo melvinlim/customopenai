@@ -267,7 +267,7 @@ def processHaruhi(script):
 	return x
 
 def splitAndSaveHaruhi(filename):
-	data=readText('scripts/haruhi/'+filename)
+	data=readText('scripts/haruhi/haruhi1/'+filename)
 	x=processHaruhi(data)
 	x=x.split('<SENTENCE>')
 	name=filename.strip('.txt')
@@ -289,7 +289,7 @@ for fn in z:
 	if(len(fn)>4):
 		splitAndSaveSeinfeld(fn)
 
-z=listfiles('scripts/haruhi')
+z=listfiles('scripts/haruhi/haruhi1/')
 for fn in z:
 	if(len(fn)>4):
 		splitAndSaveHaruhi(fn)
