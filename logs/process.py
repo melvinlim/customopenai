@@ -85,8 +85,10 @@ def processItem3(item):
 def processItem4(item):
 	item=item.strip('\n')
 	y=item.replace('\n',' ')
+	y=y.lower()
 	y=y.replace('<|im_start|>','')
 	y=y.replace('<|im_end|>','')
+	y=re.sub(r'[s]+h[h]+',r'shh',y)
 	y=y.replace('"','\\"')
 	y=y.replace('“','\\"')
 	y=y.replace('”','\\"')
@@ -94,7 +96,6 @@ def processItem4(item):
 	y=re.sub(r'[!]+','!',y)
 	y=re.sub(r'[\`]+','\\"',y)
 	y=re.sub(r"'[']+",'\\"',y)
-	y=y.lower()
 	z='{"story":"'+y+'"}'
 	#import pdb
 	#pdb.set_trace()
