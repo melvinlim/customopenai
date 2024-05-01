@@ -251,6 +251,30 @@ def splitAndSaveFrasier(filename):
 		saveText(data,'fixedScripts/'+name+'-'+str(i)+'.txt')
 		i+=1
 
+from unidecode import unidecode
+
+def processHaruhi(script):
+	script=unidecode(script)
+	script=script.lower()
+	script=script.replace('[','(')
+	script=script.replace(']',')')
+	x=script
+	#x=re.sub(r'([A-Za-z]+):',r'<SENTENCE>\1:',x)
+	x=re.sub(r'advertisement\n',r'<SENTENCE>',x)
+	return x
+
+def splitAndSaveHaruhi(filename):
+	data=readText('scripts/haruhi/'+filename)
+	x=processHaruhi(data)
+	x=x.split('<SENTENCE>')
+	name=filename.strip('.txt')
+	y=len(x)
+	i=0
+	while(i<y):
+		data=x[i]
+		saveText(data,'fixedScripts/'+name+'-'+str(i)+'.txt')
+		i+=1
+
 z=listfiles('scripts/frasier')
 for fn in z:
 	if(len(fn)>4):
@@ -261,6 +285,11 @@ z=listfiles('scripts/seinfeld')
 for fn in z:
 	if(len(fn)>4):
 		splitAndSaveSeinfeld(fn)
+
+z=listfiles('scripts/haruhi')
+for fn in z:
+	if(len(fn)>4):
+		splitAndSaveHaruhi(fn)
 
 z=readText('scripts/Friends_Transcript.txt')
 splitAndSaveFriends(z)
