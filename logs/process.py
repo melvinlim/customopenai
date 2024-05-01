@@ -266,8 +266,8 @@ def processHaruhi(script):
 	x=re.sub(r'advertisement\n',r'<SENTENCE>',x)
 	return x
 
-def splitAndSaveHaruhi(filename):
-	data=readText('scripts/haruhi/haruhi1/'+filename)
+def splitAndSaveHaruhi(path,filename):
+	data=readText(path+filename)
 	x=processHaruhi(data)
 	x=x.split('<SENTENCE>')
 	name=filename.strip('.txt')
@@ -277,6 +277,12 @@ def splitAndSaveHaruhi(filename):
 		data=x[i]
 		saveText(data,'fixedScripts/'+name+'-'+str(i)+'.txt')
 		i+=1
+
+def procHaruhi1(path):
+	z=listfiles(path)
+	for fn in z:
+		if(len(fn)>4):
+			splitAndSaveHaruhi(path,fn)
 
 z=listfiles('scripts/frasier')
 for fn in z:
@@ -289,10 +295,7 @@ for fn in z:
 	if(len(fn)>4):
 		splitAndSaveSeinfeld(fn)
 
-z=listfiles('scripts/haruhi/haruhi1/')
-for fn in z:
-	if(len(fn)>4):
-		splitAndSaveHaruhi(fn)
+procHaruhi1('scripts/haruhi/haruhi1/')
 
 z=readText('scripts/Friends_Transcript.txt')
 splitAndSaveFriends(z)
