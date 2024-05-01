@@ -1,4 +1,6 @@
 import json
+from unidecode import unidecode
+
 PATHS=['chats','fixedScripts']
 def readDataJson():
 	a=open('data49.json','r')
@@ -147,6 +149,7 @@ def processSentence1(sent):
 	return result
 
 def processSeinfeld1(script):
+	script=unidecode(script)
 	script=script.replace(':','-')
 	x=re.sub(r'([A-Z]+)\n[ ]+',r'\1:\n',script)
 	y=re.sub(r'(  )+[ \n]*','',x)
@@ -175,6 +178,7 @@ def splitAndSaveSeinfeld(filename):
 		i+=10
 
 def processFriends(script):
+	script=unidecode(script)
 	#x=re.sub(r'End\n.+\nWritten.+\n',r'EPISODEEND',z,flags=re.MULTILINE)
 	#x=re.sub(r'End\n.+\nWritten.+\n\[.+\]',r'EPISODEEND',z)
 	#x=re.sub(r'End\n.+\nWritten.+\n',r'EPISODEEND',z)
@@ -221,6 +225,7 @@ def splitAndSaveFriends(data):
 	#	i+=10
 
 def processFrasier1(script):
+	script=unidecode(script)
 	#script=script.replace(':','-')
 	script=script.replace('[','(')
 	script=script.replace(']',')')
@@ -250,8 +255,6 @@ def splitAndSaveFrasier(filename):
 		data=x[i]
 		saveText(data,'fixedScripts/'+name+'-'+str(i)+'.txt')
 		i+=1
-
-from unidecode import unidecode
 
 def processHaruhi(script):
 	script=unidecode(script)
