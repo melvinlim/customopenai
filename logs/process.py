@@ -180,6 +180,7 @@ def processFriends(script):
 	#x=re.sub(r'End\n.+\nWritten.+\n',r'EPISODEEND',z)
 	script=script.lower()
 	x=re.sub(r'[^\x00-\x7F]+', ' ', script)
+	x=re.sub(r'end.*\n.\n.\nfriends.*where chandler gets caught[\n]+written.*','',x)
 	x=re.sub(r'the one with the truth about london\nteleplay.*','',x)
 	x=re.sub(r'end\n.why was this the trailer.*','',x)
 	x=re.sub(r'end\nfriends - the one where rachel.*','',x)
