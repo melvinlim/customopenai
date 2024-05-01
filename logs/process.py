@@ -182,6 +182,7 @@ def processFriends(script):
 	x=re.sub(r'[^\x00-\x7F]+', ' ', script)
 	x=re.sub(r'end.*[\n]+.+[\n]+.*written.+','',x)
 	x=re.sub(r'end.*[\n]+.+[\n]+.*story.+','',x)
+	x=re.sub(r'end.*[\n]+.+[\n]+.+\n+aired:.+','',x)
 	x=re.sub(r'\[.+\]','<SCENE>',x)
 	x=re.sub(r'the end','<SCENE>',x)
 	x=re.sub(r'opening credits','',x)
