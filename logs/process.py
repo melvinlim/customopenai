@@ -181,6 +181,7 @@ def processFriends(script):
 	script=script.lower()
 	x=re.sub(r'[^\x00-\x7F]+', ' ', script)
 	x=re.sub(r'end\nfriends - the one where rachel.*','',x)
+	x=re.sub(r'end\n908 - the one.*','',x)
 	x=re.sub(r'end.*[\n]+.+[\n]+.+\n+.transcribe.+','',x)
 	x=re.sub(r'end.*[\n]+.+[\n]+.*written.+','',x)
 	x=re.sub(r'end.*[\n]+.+[\n]+.+\n+.*written.+','',x)
