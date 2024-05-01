@@ -91,6 +91,9 @@ def processItem4(item):
 	y=y.replace('“','\\"')
 	y=y.replace('”','\\"')
 	y=y.replace('\t',' ')
+	y=re.sub(r'[!]+','!',y)
+	y=re.sub(r'[\`]+','\\"',y)
+	y=re.sub(r"'[']+",'\\"',y)
 	y=y.lower()
 	z='{"story":"'+y+'"}'
 	#import pdb
