@@ -89,6 +89,7 @@ def processItem4(item):
 	y=y.replace('<|im_start|>','')
 	y=y.replace('<|im_end|>','')
 	y=re.sub(r'[s]+h[h]+',r'shh',y)
+	y=re.sub(r'[o]+h[h]+',r'oh',y)
 	y=y.replace('"','\\"')
 	y=y.replace('<','(')
 	y=y.replace('>',')')
