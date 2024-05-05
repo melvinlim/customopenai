@@ -1,0 +1,15 @@
+<|im_start|>storyteller:you're relaxing on a beach in hawaii.<|im_end|>
+<|im_start|>explorer:i want to go swimming<|im_end|>
+<|im_start|>storyteller:you swim out to a coral reef, and see the beautiful colors of the fish as they dart around.<|im_end|>
+<|im_start|>explorer:i see a sea turtle swimming towards the shore.  i decide to follow it<|im_end|>
+<|im_start|>storyteller:you swim alongside the sea turtle, watching as it glides gracefully through the water. as you get closer to shore, you notice that there are several other sea turtles swimming with it.
+you decide to follow the group of turtles.<|im_end|>
+<|im_start|>explorer:<|im_end|>
+<|im_start|>storyteller:you continue to swim alongside the turtles, marveling at their grace and beauty. eventually, you come upon a small island, surrounded by crystal clear water. the turtles seem to be swimming towards the island.
+you decide to swim towards the island as well.<|im_end|>
+<|im_start|>explorer:1. i decide to swim towards the island<|im_end|>
+<|im_start|>storyteller:you make your way to the island, and as you get closer, you can see that it is covered in lush vegetation and palm trees. the turtles have all gathered on the beach, and it looks like they are waiting for something.
+2. you decide to climb onto the beach and join the turtles.<|im_end|>
+<|im_start|>explorer:1. i decide to swim towards the island<|im_end|>
+<|im_start|>storyteller:you reach the island and pull yourself up onto the sandy beach. the turtles have all gathered in a circle, and they seem to be waiting for something. as you approach them, one of the turtles comes over to you and starts nudging at your hand with its beak.
+2. you decide to join the turtles in their circle.<|im_end|>

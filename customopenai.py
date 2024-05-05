@@ -73,6 +73,7 @@ class LlmModel():
 	def chatresp(self,messages):
 		#self.jsondata['prompt']=messages
 		self.jsondata['prompt']=self.sysmsg+messages+self.trailer
+		print(self.jsondata['prompt'])
 		strdata=json.dumps(self.jsondata)
 		if(self.stream):
 			request=Request(method='POST', data=strdata.encode('utf-8'), headers=self.headers, url=self.url)
