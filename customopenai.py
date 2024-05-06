@@ -43,7 +43,7 @@ def getPreMsg(name):
 		return startTok+name+':\n'
 
 class LlmModel():
-	def __init__(self,url,name,sysmsg,stream=None,maxRespLen=None,grammar=None,logprobs=None,top_k=None):
+	def __init__(self,url,name,sysmsg,stream=None,maxRespLen=None,grammar=None,logprobs=None,top_k=None,ONESENTENCE=False):
 		self.stream=False
 		self.logprobs=False
 		self.headers={"Content-type": "application/json"}
@@ -55,8 +55,14 @@ class LlmModel():
 		self.jsondata={
 			#'beam_width':5,
 			'prompt':'',
-			'stop':[startTok,endTok,'.'],
+			#'stop':[startTok,endTok,'.'],
 		}
+		if(ONESENTENCE):
+			self.jsondata['stop']=[startTok,endTok,'.']
+		else:
+			self.jsondata['stop']=[startTok,endTok]
+		#import pdb
+		#pdb.set_trace()
 		if(stream):
 			self.stream=True
 			self.jsondata['stream']=stream
