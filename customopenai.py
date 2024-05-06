@@ -55,7 +55,7 @@ class LlmModel():
 		self.jsondata={
 			#'beam_width':5,
 			'prompt':'',
-			'stop':[startTok,endTok],
+			'stop':[startTok,endTok,'.'],
 		}
 		if(stream):
 			self.stream=True

@@ -6,7 +6,7 @@ maxRespLen=5
 maxRespLen=-1
 
 storyteller_url='http://192.168.68.107:8080'
-storytellerText="you are telling a story to the explorer. he decides what action to take every 1 to 2 sentences."
+storytellerText="you are telling a story to the explorer. you allow him to act after each sentence."
 
 #i have set capybara model to run at port 8090.
 explorer_feelings_url='http://192.168.68.107:8090'
@@ -20,7 +20,8 @@ explorer_actionText="you are an explorer's actions. respond with one sentence de
 
 #document ="storyteller:you're relaxing on the bed in your apartment\n"
 #document ="storyteller:you're relaxing on a beach in hawaii."
-document ="storyteller:you're relaxing on a hammock between two palm trees on a tropical island."
+#document ="storyteller:you're relaxing on a hammock between two palm trees on a tropical island."
+document ="storyteller:you're exploring a cruise ship."
 messages='<|im_start|>'+document+'<|im_end|>'+'\n'
 
 grammar='root ::= ("alice" | "bob" | "eve")'
