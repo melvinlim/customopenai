@@ -43,7 +43,7 @@ def getPreMsg(name):
 		return startTok+name+':\n'
 
 class LlmModel():
-	def __init__(self,url,name,sysmsg,stream=None,maxRespLen=None,grammar=None,logprobs=None,top_k=None,ONESENTENCE=False):
+	def __init__(self,url,name,sysmsg,stream=None,maxRespLen=None,grammar=None,logprobs=None,top_k=None,ONESENTENCE=False,top_p=None):
 		self.stream=False
 		self.logprobs=False
 		self.headers={"Content-type": "application/json"}
@@ -70,6 +70,8 @@ class LlmModel():
 			self.jsondata['n_predict']=maxRespLen
 		if(top_k):
 			self.jsondata['top_k']=top_k
+		if(top_p):
+			self.jsondata['top_p']=top_p
 		if(grammar):
 			self.jsondata['grammar']=grammar
 		if(logprobs):
