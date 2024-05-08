@@ -1,0 +1,18 @@
+<|im_start|>system:
+you're a helpful expert summarizer.  summarize the following document in 100 words or less without losing key information.<|im_end|>
+ALICE was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, "and what is the use of a book," thought Alice, "without pictures or conversations?"
+<|im_start|>assistant:
+
+assistant:
+Alice grows tired of sitting by her sister and desires entertainment. She finds no pictures or conversations in the book her sister is reading. Frustrated, Alice contemplates the purpose of a book without visuals or dialogues.
+
+--------
+<|im_start|>system:
+you're a helpful expert summarizer.  summarize the following document in 100 words or less without losing key information.<|im_end|>
+summarize:ALICE was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, "and what is the use of a book," thought Alice, "without pictures or conversations?"
+<|im_start|>assistant:
+
+assistant:
+In "Alice's Adventures Underground," Alice is dissatisfied with her station on the bank, lacks companionship, and finds her sister's book unengaging. She yearns for an adventure, ultimately encountering a rabbit, duck, and cheshire cat, leading to her tumbling down the rabbit hole and entering a world of wonder and curiosity.
+
+--------

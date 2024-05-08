@@ -1,0 +1,281 @@
+<|im_start|>system:
+you're a helpful expert summarizer.  summarize the following document in 100 words or less without losing key information.<|im_end|>
+<|im_start|>alice:
+Hey Bob, let's go on the Space Mountain ride! It's my favorite.
+<|im_end|>
+
+<|im_start|>Bob:
+Sure, Alice! I've always wanted to try it out. Let's go!
+<|im_end|>
+
+<|im_start|>Alice:
+Great! The line looks pretty long, but it's worth the wait.
+<|im_end|>
+
+<|im_start|>Bob:
+Yeah, I've heard it's one of the best rides at Disneyland.
+<|im_end|>
+
+<|im_start|>Alice:
+It's so much fun! The drops and turns are thrilling, and the music and lights really add to the atmosphere.
+<|im_end|>
+
+<|im_start|>Bob:
+I can't wait to experience it for myself!
+<|im_end|>
+
+<|im_start|>Alice:
+Once we're on the ride, we'll be in total darkness, so hold on tight!
+<|im_end|>
+
+<|im_start|>Bob:
+Don't worry, I'm ready for anything!
+<|im_end|>
+
+As we approach the loading area, we can hear the roar of the engines and the screams of the riders. The line starts to move, and we hop on the rocket-shaped vehicles. The ride attendant straps us in, and we're off!
+
+<|im_start|>Bob:
+Wow, this is so fast! I can't believe how quick we're going!
+<|im_end|>
+
+<|im_start|>Alice:
+Hang on, Bob! The first drop is coming up!
+<|im_end|>
+
+<|im_start|>Bob:
+Oh wow, this is amazing! I can't believe how much fun this is!
+<|im_end|>
+
+<|im_start|>Alice:
+I told you, Space Mountain is the best! We're going through the tunnels now, with twists and turns all around.
+<|im_end|>
+
+<|im_start|>Bob:
+This is so cool! I love the music and the lights. It feels like we're in space!
+<|im_end|>
+
+The ride comes to an end, and we emerge from the tunnel. The ride attendant opens the door, and we step out of the rocket vehicle.
+
+<|im_start|>Alice:
+Great job, Bob! I'm so glad we went on this ride. It was amazing!
+<|im_end|>
+
+<|im_start|>Bob:
+Me too, Alice! I can't wait to do it again.
+<|im_end|>
+
+<|im_start|>Alice:
+I'm already planning our next adventure.
+<|im_end|>
+
+<|im_start|>Bob:
+Sounds like we're in for a wild ride!
+<|im_end|>
+
+<|im_start|>Alice:
+Indeed we are!
+<|im_end|>
+
+<|im_start|>Bob:
+Let's go have some fun!
+<|im_end|>
+
+<|im_start|>Alice:
+Let's do it!
+<|im_end|>
+We exit the ride and head towards the exit, our adrenaline still pumping.
+
+<|im_start|>Bob:
+That was so much fun, Alice! I can't believe how fast we were going!
+<|im_end|>
+
+<|im_start|>Alice:
+I told you, Space Mountain is the best ride at Disneyland! I can't wait to do it again.
+<|im_end|>
+
+<|im_start|>Bob:
+Me too! Let's go get some ice cream and celebrate our victory!
+<|im_end|>
+
+<|im_start|>Alice:
+Sounds like a plan!
+<|im_end|>
+
+As we walk towards the exit, we can see the bright lights of Disneyland, and we know we're in for more exciting adventures.
+
+<|im_start|>Alice:
+I'm so glad we went on this ride, Bob. It was amazing!
+<|im_end|>
+
+<|im_start|>Bob:
+Me too, Alice! I can't wait to do it again.
+<|im_end|>
+
+<|im_start|>Alice:
+I'm already planning our next adventure.
+<|im_end|>
+
+<|im_start|>Bob:
+Sounds like we're in for a wild ride!
+<|im_end|>
+
+<|im_start|>Alice:
+Indeed we are!
+<|im_end|>
+
+<|im_start|>Bob:
+Let's go have some fun!
+<|im_end|>
+
+<|im_start|>Alice:
+Let's do it!
+<|im_end|>
+
+As we walk towards the exit, we can see the bright lights of Disneyland, and we know we're in for more exciting adventures.
+
+<|im_start|>assistant:
+
+assistant:
+Alice and Bob went on the Space Mountain ride at Disneyland, which is a thrilling roller coaster with twists and turns in total darkness. They both enjoyed the experience, with Bob describing it as "so much fun" and "amazing." They plan to go on the ride again and are already making plans for their next adventure.
+--------
+<|im_start|>system:
+you're a helpful expert summarizer.  summarize the following document in 100 words or less without losing key information.<|im_end|>
+summarize:<|im_start|>alice:
+Hey Bob, let's go on the Space Mountain ride! It's my favorite.
+<|im_end|>
+
+<|im_start|>Bob:
+Sure, Alice! I've always wanted to try it out. Let's go!
+<|im_end|>
+
+<|im_start|>Alice:
+Great! The line looks pretty long, but it's worth the wait.
+<|im_end|>
+
+<|im_start|>Bob:
+Yeah, I've heard it's one of the best rides at Disneyland.
+<|im_end|>
+
+<|im_start|>Alice:
+It's so much fun! The drops and turns are thrilling, and the music and lights really add to the atmosphere.
+<|im_end|>
+
+<|im_start|>Bob:
+I can't wait to experience it for myself!
+<|im_end|>
+
+<|im_start|>Alice:
+Once we're on the ride, we'll be in total darkness, so hold on tight!
+<|im_end|>
+
+<|im_start|>Bob:
+Don't worry, I'm ready for anything!
+<|im_end|>
+
+As we approach the loading area, we can hear the roar of the engines and the screams of the riders. The line starts to move, and we hop on the rocket-shaped vehicles. The ride attendant straps us in, and we're off!
+
+<|im_start|>Bob:
+Wow, this is so fast! I can't believe how quick we're going!
+<|im_end|>
+
+<|im_start|>Alice:
+Hang on, Bob! The first drop is coming up!
+<|im_end|>
+
+<|im_start|>Bob:
+Oh wow, this is amazing! I can't believe how much fun this is!
+<|im_end|>
+
+<|im_start|>Alice:
+I told you, Space Mountain is the best! We're going through the tunnels now, with twists and turns all around.
+<|im_end|>
+
+<|im_start|>Bob:
+This is so cool! I love the music and the lights. It feels like we're in space!
+<|im_end|>
+
+The ride comes to an end, and we emerge from the tunnel. The ride attendant opens the door, and we step out of the rocket vehicle.
+
+<|im_start|>Alice:
+Great job, Bob! I'm so glad we went on this ride. It was amazing!
+<|im_end|>
+
+<|im_start|>Bob:
+Me too, Alice! I can't wait to do it again.
+<|im_end|>
+
+<|im_start|>Alice:
+I'm already planning our next adventure.
+<|im_end|>
+
+<|im_start|>Bob:
+Sounds like we're in for a wild ride!
+<|im_end|>
+
+<|im_start|>Alice:
+Indeed we are!
+<|im_end|>
+
+<|im_start|>Bob:
+Let's go have some fun!
+<|im_end|>
+
+<|im_start|>Alice:
+Let's do it!
+<|im_end|>
+We exit the ride and head towards the exit, our adrenaline still pumping.
+
+<|im_start|>Bob:
+That was so much fun, Alice! I can't believe how fast we were going!
+<|im_end|>
+
+<|im_start|>Alice:
+I told you, Space Mountain is the best ride at Disneyland! I can't wait to do it again.
+<|im_end|>
+
+<|im_start|>Bob:
+Me too! Let's go get some ice cream and celebrate our victory!
+<|im_end|>
+
+<|im_start|>Alice:
+Sounds like a plan!
+<|im_end|>
+
+As we walk towards the exit, we can see the bright lights of Disneyland, and we know we're in for more exciting adventures.
+
+<|im_start|>Alice:
+I'm so glad we went on this ride, Bob. It was amazing!
+<|im_end|>
+
+<|im_start|>Bob:
+Me too, Alice! I can't wait to do it again.
+<|im_end|>
+
+<|im_start|>Alice:
+I'm already planning our next adventure.
+<|im_end|>
+
+<|im_start|>Bob:
+Sounds like we're in for a wild ride!
+<|im_end|>
+
+<|im_start|>Alice:
+Indeed we are!
+<|im_end|>
+
+<|im_start|>Bob:
+Let's go have some fun!
+<|im_end|>
+
+<|im_start|>Alice:
+Let's do it!
+<|im_end|>
+
+As we walk towards the exit, we can see the bright lights of Disneyland, and we know we're in for more exciting adventures.
+
+<|im_start|>assistant:
+
+assistant:
+Alice and Bob's adventure at Space Mountain comes to an end as they exit the ride and head towards the exit. They share their excitement and plan for their next adventure together.
+
+--------

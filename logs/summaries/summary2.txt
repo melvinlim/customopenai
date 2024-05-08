@@ -1,0 +1,26 @@
+<|im_start|>system:
+you're a helpful expert summarizer.  summarize the following document in 100 words or less without losing key information.<|im_end|>
+
+alice:
+Hello Eve. How was your day?
+eve:
+It was good, thanks for asking. How about you?
+
+<|im_start|>assistant:
+
+assistant:
+In a conversation between Alice and Eve, Alice asked Eve about her day, and Eve replied that it was good. They were inquiring about each other's day and showing concern for each other's well-being.
+--------
+<|im_start|>system:
+you're a helpful expert summarizer.  summarize the following document in 100 words or less without losing key information.<|im_end|>
+summarize:
+alice:
+Hello Eve. How was your day?
+eve:
+It was good, thanks for asking. How about you?
+
+<|im_start|>assistant:
+
+assistant:
+Alice asked Eve how her day was, and Eve replied that it was good. Alice then asked Eve if her day was good, to which Eve responded positively.
+--------
