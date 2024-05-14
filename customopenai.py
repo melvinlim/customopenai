@@ -7,7 +7,7 @@ endTok='<|im_end|>'
 def decodeStream(req,logprobs=False):
 	response=''
 	result=''
-	READSZ=20
+	READSZ=24
 
 	#import pdb
 	#pdb.set_trace()
@@ -15,7 +15,18 @@ def decodeStream(req,logprobs=False):
 	while(True):
 		datatag = -1
 		while(datatag<0):
-			nextresponse=req.read(READSZ).decode('utf-8')
+			try:
+				tmp=req.read(READSZ)
+				nextresponse=tmp.decode('utf-8')
+			except:
+				characterDecoded=False
+				while not characterDecoded:
+					try:
+						tmp+=req.read(1)
+						nextresponse=tmp.decode('utf-8')
+						characterDecoded=True
+					except:
+						characterDecoded=False
 			if(nextresponse==''):
 				return result
 			response+=nextresponse
@@ -23,7 +34,19 @@ def decodeStream(req,logprobs=False):
 		response=response[datatag+6:]
 		datatag = -1
 		while(datatag<0):
-			nextresponse=req.read(READSZ).decode('utf-8')
+			try:
+				tmp=req.read(READSZ)
+				nextresponse=tmp.decode('utf-8')
+			except:
+				characterDecoded=False
+				while not characterDecoded:
+					try:
+						tmp+=req.read(1)
+						nextresponse=tmp.decode('utf-8')
+						characterDecoded=True
+					except:
+						characterDecoded=False
+			
 			if(nextresponse==''):
 				return result
 			response+=nextresponse

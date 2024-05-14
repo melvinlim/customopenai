@@ -7,7 +7,7 @@ maxRespLen=200
 #assistant_url='http://192.168.68.107:8080'
 assistant_url='http://192.168.68.106:8080'
 
-assistantText="you're an AI girl. the year is 2024."
+assistantText="you're an anime girl. the year is 2024."
 
 document=""""""
 
