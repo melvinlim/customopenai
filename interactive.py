@@ -20,6 +20,7 @@ assistant=LlmModel(assistant_url,'girl',assistantText,stream=STREAM,maxRespLen=m
 #msg=assistant.chatresp(messages)
 
 for i in range(5):
+	print(':',end='')
 	msg=input()
 	messages+='<|im_start|>guy:'+msg+'<|im_end|>'
 	msg=assistant.chatresp(messages)
